@@ -1,0 +1,26 @@
+{
+  "experiment": "dhp_chen_universality",
+  "date": "2026-05-03",
+  "system": "Chen",
+  "params": {"a": 35, "b": 3, "c": 28, "dt": 0.02},
+  "tau_L": 24.0,
+  "dhp_threshold": 0.70,
+  "steps": 60000,
+  "status": "complete",
+  "note": "JSON dump crashed (numpy float32 serialization), results extracted from log",
+  "results": [
+    {"seed": 0, "tau_star": 14.92, "ratio": 0.622, "variance": 0.150, "dhp_pass": false},
+    {"seed": 1, "tau_star": 14.83, "ratio": 0.618, "variance": 0.219, "dhp_pass": false},
+    {"seed": 2, "tau_star": 14.68, "ratio": 0.612, "variance": 0.186, "dhp_pass": false},
+    {"seed": 3, "tau_star": 15.25, "ratio": 0.636, "variance": 0.326, "dhp_pass": false},
+    {"seed": 42, "tau_star": 15.04, "ratio": 0.627, "variance": 0.541, "dhp_pass": false}
+  ],
+  "summary": {
+    "mean_tau_star": 14.944,
+    "std_tau_star": 0.203,
+    "mean_ratio": 0.623,
+    "slots_diverged": "5/5",
+    "dhp_at_70pct": "0/5"
+  },
+  "key_finding": "Slot divergence confirmed (DHP mechanism works) but 70% threshold not met at DIM=128. Absolute tau* = 14.94 nearly identical to Lorenz (15.65), suggesting architecture capacity ceiling at ~15 steps."
+}
