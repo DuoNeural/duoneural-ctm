@@ -1,0 +1,884 @@
+{
+  "model": "Qwen2.5-14B-Instruct",
+  "n_ctrl": 20,
+  "n_exp": 10,
+  "trace": [
+    {
+      "layer": 0,
+      "magnitude": 0.0,
+      "cos_rot": 1.0,
+      "angle_deg": 0.0,
+      "ctrl_gap": 0.0,
+      "ctrl_sign_acc": 0.0,
+      "exp_gap": 0.0,
+      "exp_sign_acc": 0.0,
+      "total_var": 0.0
+    },
+    {
+      "layer": 1,
+      "magnitude": 0.603779137134552,
+      "cos_rot": 0.0,
+      "angle_deg": 90.0,
+      "ctrl_gap": 0.6037783622741699,
+      "ctrl_sign_acc": 0.95,
+      "exp_gap": -0.20364752411842346,
+      "exp_sign_acc": 0.3,
+      "total_var": 0.003484441665932536
+    },
+    {
+      "layer": 2,
+      "magnitude": 0.6563423871994019,
+      "cos_rot": 0.8967348337173462,
+      "angle_deg": 26.267859465272945,
+      "ctrl_gap": 0.6563433408737183,
+      "ctrl_sign_acc": 0.95,
+      "exp_gap": 0.02794823609292507,
+      "exp_sign_acc": 0.7,
+      "total_var": 0.005561957601457834
+    },
+    {
+      "layer": 3,
+      "magnitude": 0.7186950445175171,
+      "cos_rot": 0.8909257650375366,
+      "angle_deg": 27.010190413860396,
+      "ctrl_gap": 0.7186957597732544,
+      "ctrl_sign_acc": 0.95,
+      "exp_gap": -0.16505201160907745,
+      "exp_sign_acc": 0.7,
+      "total_var": 0.008488240651786327
+    },
+    {
+      "layer": 4,
+      "magnitude": 0.8582176566123962,
+      "cos_rot": 0.8659622073173523,
+      "angle_deg": 30.00724098919939,
+      "ctrl_gap": 0.8582165837287903,
+      "ctrl_sign_acc": 0.95,
+      "exp_gap": -0.1542634516954422,
+      "exp_sign_acc": 0.5,
+      "total_var": 0.012463981285691261
+    },
+    {
+      "layer": 5,
+      "magnitude": 1.0747039318084717,
+      "cos_rot": 0.7998656034469604,
+      "angle_deg": 36.882729655490174,
+      "ctrl_gap": 1.0747029781341553,
+      "ctrl_sign_acc": 0.95,
+      "exp_gap": -0.22998245060443878,
+      "exp_sign_acc": 0.4,
+      "total_var": 0.01881163753569126
+    },
+    {
+      "layer": 6,
+      "magnitude": 1.16704261302948,
+      "cos_rot": 0.9060122966766357,
+      "angle_deg": 25.040030636600946,
+      "ctrl_gap": 1.1670416593551636,
+      "ctrl_sign_acc": 1.0,
+      "exp_gap": -0.20625154674053192,
+      "exp_sign_acc": 0.4,
+      "total_var": 0.026459787040948868
+    },
+    {
+      "layer": 7,
+      "magnitude": 1.4754177331924438,
+      "cos_rot": 0.8181555867195129,
+      "angle_deg": 35.099415156220125,
+      "ctrl_gap": 1.4754161834716797,
+      "ctrl_sign_acc": 1.0,
+      "exp_gap": 0.04973950237035751,
+      "exp_sign_acc": 0.4,
+      "total_var": 0.040234487503767014
+    },
+    {
+      "layer": 8,
+      "magnitude": 1.6158161163330078,
+      "cos_rot": 0.8600749373435974,
+      "angle_deg": 30.675002107634043,
+      "ctrl_gap": 1.6158173084259033,
+      "ctrl_sign_acc": 1.0,
+      "exp_gap": 0.2570313811302185,
+      "exp_sign_acc": 0.4,
+      "total_var": 0.053773630410432816
+    },
+    {
+      "layer": 9,
+      "magnitude": 1.7949507236480713,
+      "cos_rot": 0.7986025214195251,
+      "angle_deg": 37.00314056700289,
+      "ctrl_gap": 1.7949470281600952,
+      "ctrl_sign_acc": 1.0,
+      "exp_gap": 0.4755433201789856,
+      "exp_sign_acc": 0.8,
+      "total_var": 0.06291218101978302
+    },
+    {
+      "layer": 10,
+      "magnitude": 2.0175020694732666,
+      "cos_rot": 0.7776286602020264,
+      "angle_deg": 38.95603238927404,
+      "ctrl_gap": 2.0175023078918457,
+      "ctrl_sign_acc": 1.0,
+      "exp_gap": 0.6416558027267456,
+      "exp_sign_acc": 0.8,
+      "total_var": 0.08537513017654419
+    },
+    {
+      "layer": 11,
+      "magnitude": 2.115983486175537,
+      "cos_rot": 0.8563862442970276,
+      "angle_deg": 31.08677983907603,
+      "ctrl_gap": 2.115978479385376,
+      "ctrl_sign_acc": 1.0,
+      "exp_gap": 0.9872152209281921,
+      "exp_sign_acc": 0.8,
+      "total_var": 0.0950741246342659
+    },
+    {
+      "layer": 12,
+      "magnitude": 2.653780698776245,
+      "cos_rot": 0.7588239908218384,
+      "angle_deg": 40.63936708162457,
+      "ctrl_gap": 2.653782367706299,
+      "ctrl_sign_acc": 0.95,
+      "exp_gap": 1.0977815389633179,
+      "exp_sign_acc": 0.8,
+      "total_var": 0.12523512542247772
+    },
+    {
+      "layer": 13,
+      "magnitude": 3.0573513507843018,
+      "cos_rot": 0.7893920540809631,
+      "angle_deg": 37.87126575035406,
+      "ctrl_gap": 3.0573554039001465,
+      "ctrl_sign_acc": 0.95,
+      "exp_gap": 0.8947542309761047,
+      "exp_sign_acc": 0.6,
+      "total_var": 0.15375739336013794
+    },
+    {
+      "layer": 14,
+      "magnitude": 3.565667152404785,
+      "cos_rot": 0.7722923755645752,
+      "angle_deg": 39.4398091698623,
+      "ctrl_gap": 3.565661668777466,
+      "ctrl_sign_acc": 0.95,
+      "exp_gap": 0.9094208478927612,
+      "exp_sign_acc": 0.6,
+      "total_var": 0.19109472632408142
+    },
+    {
+      "layer": 15,
+      "magnitude": 4.129271507263184,
+      "cos_rot": 0.7884882688522339,
+      "angle_deg": 37.9555385450417,
+      "ctrl_gap": 4.129264831542969,
+      "ctrl_sign_acc": 0.95,
+      "exp_gap": 1.1411266326904297,
+      "exp_sign_acc": 0.6,
+      "total_var": 0.22261162102222443
+    },
+    {
+      "layer": 16,
+      "magnitude": 4.473985195159912,
+      "cos_rot": 0.7752751708030701,
+      "angle_deg": 39.17001282914019,
+      "ctrl_gap": 4.473986625671387,
+      "ctrl_sign_acc": 1.0,
+      "exp_gap": 2.2679100036621094,
+      "exp_sign_acc": 0.9,
+      "total_var": 0.25380268692970276
+    },
+    {
+      "layer": 17,
+      "magnitude": 5.346914291381836,
+      "cos_rot": 0.771099328994751,
+      "angle_deg": 39.54728947450323,
+      "ctrl_gap": 5.346912860870361,
+      "ctrl_sign_acc": 1.0,
+      "exp_gap": 1.9806461334228516,
+      "exp_sign_acc": 0.6,
+      "total_var": 0.29609936475753784
+    },
+    {
+      "layer": 18,
+      "magnitude": 6.657404899597168,
+      "cos_rot": 0.7918792366981506,
+      "angle_deg": 37.63852248971983,
+      "ctrl_gap": 6.657393455505371,
+      "ctrl_sign_acc": 1.0,
+      "exp_gap": 2.3366119861602783,
+      "exp_sign_acc": 0.7,
+      "total_var": 0.32506394386291504
+    },
+    {
+      "layer": 19,
+      "magnitude": 7.84806489944458,
+      "cos_rot": 0.8062864542007446,
+      "angle_deg": 36.26532137934488,
+      "ctrl_gap": 7.848060607910156,
+      "ctrl_sign_acc": 1.0,
+      "exp_gap": 3.018662929534912,
+      "exp_sign_acc": 0.7,
+      "total_var": 0.35514482855796814
+    },
+    {
+      "layer": 20,
+      "magnitude": 8.228802680969238,
+      "cos_rot": 0.8352444171905518,
+      "angle_deg": 33.35870283617221,
+      "ctrl_gap": 8.228791236877441,
+      "ctrl_sign_acc": 1.0,
+      "exp_gap": 2.9557394981384277,
+      "exp_sign_acc": 0.7,
+      "total_var": 0.3505716919898987
+    },
+    {
+      "layer": 21,
+      "magnitude": 10.303244590759277,
+      "cos_rot": 0.7697222828865051,
+      "angle_deg": 39.67104335369101,
+      "ctrl_gap": 10.303248405456543,
+      "ctrl_sign_acc": 1.0,
+      "exp_gap": 4.144377708435059,
+      "exp_sign_acc": 0.9,
+      "total_var": 0.3856566548347473
+    },
+    {
+      "layer": 22,
+      "magnitude": 12.409584999084473,
+      "cos_rot": 0.8068860173225403,
+      "angle_deg": 36.20720686269378,
+      "ctrl_gap": 12.409543991088867,
+      "ctrl_sign_acc": 1.0,
+      "exp_gap": 4.303431987762451,
+      "exp_sign_acc": 0.9,
+      "total_var": 0.3972541391849518
+    },
+    {
+      "layer": 23,
+      "magnitude": 16.502578735351562,
+      "cos_rot": 0.7974423170089722,
+      "angle_deg": 37.11344892759587,
+      "ctrl_gap": 16.502574920654297,
+      "ctrl_sign_acc": 1.0,
+      "exp_gap": 4.868762969970703,
+      "exp_sign_acc": 0.8,
+      "total_var": 0.4499966502189636
+    },
+    {
+      "layer": 24,
+      "magnitude": 18.227615356445312,
+      "cos_rot": 0.8529136180877686,
+      "angle_deg": 31.47000098605772,
+      "ctrl_gap": 18.227602005004883,
+      "ctrl_sign_acc": 1.0,
+      "exp_gap": 5.550050735473633,
+      "exp_sign_acc": 0.8,
+      "total_var": 0.497719943523407
+    },
+    {
+      "layer": 25,
+      "magnitude": 21.134464263916016,
+      "cos_rot": 0.8577094078063965,
+      "angle_deg": 30.93963998155232,
+      "ctrl_gap": 21.134441375732422,
+      "ctrl_sign_acc": 1.0,
+      "exp_gap": 5.739866733551025,
+      "exp_sign_acc": 0.8,
+      "total_var": 0.5576344728469849
+    },
+    {
+      "layer": 26,
+      "magnitude": 23.34566307067871,
+      "cos_rot": 0.872138500213623,
+      "angle_deg": 29.29189394765076,
+      "ctrl_gap": 23.345705032348633,
+      "ctrl_sign_acc": 1.0,
+      "exp_gap": 7.5325727462768555,
+      "exp_sign_acc": 0.8,
+      "total_var": 0.5829892158508301
+    },
+    {
+      "layer": 27,
+      "magnitude": 25.912948608398438,
+      "cos_rot": 0.8525775671005249,
+      "angle_deg": 31.506863574693586,
+      "ctrl_gap": 25.912948608398438,
+      "ctrl_sign_acc": 1.0,
+      "exp_gap": 8.894037246704102,
+      "exp_sign_acc": 0.8,
+      "total_var": 0.6055396795272827
+    },
+    {
+      "layer": 28,
+      "magnitude": 32.908267974853516,
+      "cos_rot": 0.8381044864654541,
+      "angle_deg": 33.059503946016925,
+      "ctrl_gap": 32.90822982788086,
+      "ctrl_sign_acc": 1.0,
+      "exp_gap": 14.099248886108398,
+      "exp_sign_acc": 0.9,
+      "total_var": 0.6952282190322876
+    },
+    {
+      "layer": 29,
+      "magnitude": 36.87898254394531,
+      "cos_rot": 0.7930147051811218,
+      "angle_deg": 37.53186032320882,
+      "ctrl_gap": 36.87895965576172,
+      "ctrl_sign_acc": 1.0,
+      "exp_gap": 15.672121047973633,
+      "exp_sign_acc": 0.9,
+      "total_var": 0.7986172437667847
+    },
+    {
+      "layer": 30,
+      "magnitude": 40.25642013549805,
+      "cos_rot": 0.8535645008087158,
+      "angle_deg": 31.398492980750593,
+      "ctrl_gap": 40.25634002685547,
+      "ctrl_sign_acc": 1.0,
+      "exp_gap": 17.519229888916016,
+      "exp_sign_acc": 0.8,
+      "total_var": 0.8984459042549133
+    },
+    {
+      "layer": 31,
+      "magnitude": 50.5841178894043,
+      "cos_rot": 0.7828269600868225,
+      "angle_deg": 38.47985706294944,
+      "ctrl_gap": 50.58417892456055,
+      "ctrl_sign_acc": 1.0,
+      "exp_gap": 25.765472412109375,
+      "exp_sign_acc": 0.9,
+      "total_var": 1.182415246963501
+    },
+    {
+      "layer": 32,
+      "magnitude": 58.14197540283203,
+      "cos_rot": 0.8856642246246338,
+      "angle_deg": 27.666627848642857,
+      "ctrl_gap": 58.14191818237305,
+      "ctrl_sign_acc": 0.95,
+      "exp_gap": 29.57631492614746,
+      "exp_sign_acc": 0.8,
+      "total_var": 1.5477848052978516
+    },
+    {
+      "layer": 33,
+      "magnitude": 64.6715087890625,
+      "cos_rot": 0.9073195457458496,
+      "angle_deg": 24.86247840679109,
+      "ctrl_gap": 64.67146301269531,
+      "ctrl_sign_acc": 0.95,
+      "exp_gap": 35.27680206298828,
+      "exp_sign_acc": 0.9,
+      "total_var": 1.8507827520370483
+    },
+    {
+      "layer": 34,
+      "magnitude": 81.8136215209961,
+      "cos_rot": 0.8369431495666504,
+      "angle_deg": 33.18128232091638,
+      "ctrl_gap": 81.81350708007812,
+      "ctrl_sign_acc": 0.95,
+      "exp_gap": 56.61711502075195,
+      "exp_sign_acc": 1.0,
+      "total_var": 2.5161709785461426
+    },
+    {
+      "layer": 35,
+      "magnitude": 92.88500213623047,
+      "cos_rot": 0.869152843952179,
+      "angle_deg": 29.63965674574396,
+      "ctrl_gap": 92.88497161865234,
+      "ctrl_sign_acc": 0.95,
+      "exp_gap": 65.33332061767578,
+      "exp_sign_acc": 1.0,
+      "total_var": 3.147143840789795
+    },
+    {
+      "layer": 36,
+      "magnitude": 100.95355224609375,
+      "cos_rot": 0.9096907377243042,
+      "angle_deg": 24.53735129688237,
+      "ctrl_gap": 100.95362854003906,
+      "ctrl_sign_acc": 0.95,
+      "exp_gap": 68.67062377929688,
+      "exp_sign_acc": 0.9,
+      "total_var": 3.7996456623077393
+    },
+    {
+      "layer": 37,
+      "magnitude": 108.50724029541016,
+      "cos_rot": 0.9402538537979126,
+      "angle_deg": 19.90576837649564,
+      "ctrl_gap": 108.50716400146484,
+      "ctrl_sign_acc": 0.95,
+      "exp_gap": 74.43343353271484,
+      "exp_sign_acc": 0.9,
+      "total_var": 4.709900379180908
+    },
+    {
+      "layer": 38,
+      "magnitude": 120.99635314941406,
+      "cos_rot": 0.9345631003379822,
+      "angle_deg": 20.842324957882578,
+      "ctrl_gap": 120.99658203125,
+      "ctrl_sign_acc": 0.9,
+      "exp_gap": 86.32550811767578,
+      "exp_sign_acc": 0.9,
+      "total_var": 5.827721118927002
+    },
+    {
+      "layer": 39,
+      "magnitude": 133.9871826171875,
+      "cos_rot": 0.9429360628128052,
+      "angle_deg": 19.44937551386564,
+      "ctrl_gap": 133.9871368408203,
+      "ctrl_sign_acc": 0.9,
+      "exp_gap": 94.91316223144531,
+      "exp_sign_acc": 0.9,
+      "total_var": 7.240808963775635
+    },
+    {
+      "layer": 40,
+      "magnitude": 141.2227325439453,
+      "cos_rot": 0.9514118432998657,
+      "angle_deg": 17.93400073601964,
+      "ctrl_gap": 141.22259521484375,
+      "ctrl_sign_acc": 0.9,
+      "exp_gap": 97.26017761230469,
+      "exp_sign_acc": 1.0,
+      "total_var": 8.663399696350098
+    },
+    {
+      "layer": 41,
+      "magnitude": 150.75772094726562,
+      "cos_rot": 0.9616712927818298,
+      "angle_deg": 15.914636730648555,
+      "ctrl_gap": 150.75741577148438,
+      "ctrl_sign_acc": 0.9,
+      "exp_gap": 102.27108764648438,
+      "exp_sign_acc": 1.0,
+      "total_var": 10.879607200622559
+    },
+    {
+      "layer": 42,
+      "magnitude": 160.76991271972656,
+      "cos_rot": 0.9462191462516785,
+      "angle_deg": 18.876320865200665,
+      "ctrl_gap": 160.76986694335938,
+      "ctrl_sign_acc": 0.9,
+      "exp_gap": 107.8396224975586,
+      "exp_sign_acc": 0.9,
+      "total_var": 12.623115539550781
+    },
+    {
+      "layer": 43,
+      "magnitude": 169.34629821777344,
+      "cos_rot": 0.9640944600105286,
+      "angle_deg": 15.400203722201832,
+      "ctrl_gap": 169.34625244140625,
+      "ctrl_sign_acc": 0.9,
+      "exp_gap": 112.42806243896484,
+      "exp_sign_acc": 1.0,
+      "total_var": 14.681408882141113
+    },
+    {
+      "layer": 44,
+      "magnitude": 181.40155029296875,
+      "cos_rot": 0.9614225029945374,
+      "angle_deg": 15.966539520628482,
+      "ctrl_gap": 181.40158081054688,
+      "ctrl_sign_acc": 0.95,
+      "exp_gap": 122.5055160522461,
+      "exp_sign_acc": 0.9,
+      "total_var": 17.195653915405273
+    },
+    {
+      "layer": 45,
+      "magnitude": 193.51083374023438,
+      "cos_rot": 0.9566053748130798,
+      "angle_deg": 16.94098862706431,
+      "ctrl_gap": 193.5107879638672,
+      "ctrl_sign_acc": 1.0,
+      "exp_gap": 127.61854553222656,
+      "exp_sign_acc": 0.9,
+      "total_var": 20.6369686126709
+    },
+    {
+      "layer": 46,
+      "magnitude": 209.1731719970703,
+      "cos_rot": 0.9549142718315125,
+      "angle_deg": 17.270405655896006,
+      "ctrl_gap": 209.17355346679688,
+      "ctrl_sign_acc": 1.0,
+      "exp_gap": 136.3449249267578,
+      "exp_sign_acc": 0.9,
+      "total_var": 24.246673583984375
+    },
+    {
+      "layer": 47,
+      "magnitude": 229.91351318359375,
+      "cos_rot": 0.899294376373291,
+      "angle_deg": 25.93452938618298,
+      "ctrl_gap": 229.91342163085938,
+      "ctrl_sign_acc": 1.0,
+      "exp_gap": 155.45008850097656,
+      "exp_sign_acc": 0.9,
+      "total_var": 32.43336868286133
+    },
+    {
+      "layer": 48,
+      "magnitude": 68.716552734375,
+      "cos_rot": 0.7373268604278564,
+      "angle_deg": 42.49579980917695,
+      "ctrl_gap": 68.71663665771484,
+      "ctrl_sign_acc": 0.95,
+      "exp_gap": 48.749874114990234,
+      "exp_sign_acc": 0.8,
+      "total_var": 2.5865817070007324
+    }
+  ],
+  "suppression_layers": [
+    {
+      "layer": 1,
+      "angle_deg": 90.0,
+      "exp_sign_acc_before": 0.0,
+      "exp_sign_acc_after": 0.3,
+      "exp_gap_delta": -0.20364752411842346
+    },
+    {
+      "layer": 2,
+      "angle_deg": 26.267859465272945,
+      "exp_sign_acc_before": 0.3,
+      "exp_sign_acc_after": 0.7,
+      "exp_gap_delta": 0.23159576021134853
+    },
+    {
+      "layer": 3,
+      "angle_deg": 27.010190413860396,
+      "exp_sign_acc_before": 0.7,
+      "exp_sign_acc_after": 0.7,
+      "exp_gap_delta": -0.19300024770200253
+    },
+    {
+      "layer": 4,
+      "angle_deg": 30.00724098919939,
+      "exp_sign_acc_before": 0.7,
+      "exp_sign_acc_after": 0.5,
+      "exp_gap_delta": 0.010788559913635254
+    },
+    {
+      "layer": 5,
+      "angle_deg": 36.882729655490174,
+      "exp_sign_acc_before": 0.5,
+      "exp_sign_acc_after": 0.4,
+      "exp_gap_delta": -0.07571899890899658
+    },
+    {
+      "layer": 6,
+      "angle_deg": 25.040030636600946,
+      "exp_sign_acc_before": 0.4,
+      "exp_sign_acc_after": 0.4,
+      "exp_gap_delta": 0.02373090386390686
+    },
+    {
+      "layer": 7,
+      "angle_deg": 35.099415156220125,
+      "exp_sign_acc_before": 0.4,
+      "exp_sign_acc_after": 0.4,
+      "exp_gap_delta": 0.25599104911088943
+    },
+    {
+      "layer": 8,
+      "angle_deg": 30.675002107634043,
+      "exp_sign_acc_before": 0.4,
+      "exp_sign_acc_after": 0.4,
+      "exp_gap_delta": 0.207291878759861
+    },
+    {
+      "layer": 9,
+      "angle_deg": 37.00314056700289,
+      "exp_sign_acc_before": 0.4,
+      "exp_sign_acc_after": 0.8,
+      "exp_gap_delta": 0.2185119390487671
+    },
+    {
+      "layer": 10,
+      "angle_deg": 38.95603238927404,
+      "exp_sign_acc_before": 0.8,
+      "exp_sign_acc_after": 0.8,
+      "exp_gap_delta": 0.16611248254776
+    },
+    {
+      "layer": 11,
+      "angle_deg": 31.08677983907603,
+      "exp_sign_acc_before": 0.8,
+      "exp_sign_acc_after": 0.8,
+      "exp_gap_delta": 0.34555941820144653
+    },
+    {
+      "layer": 12,
+      "angle_deg": 40.63936708162457,
+      "exp_sign_acc_before": 0.8,
+      "exp_sign_acc_after": 0.8,
+      "exp_gap_delta": 0.11056631803512573
+    },
+    {
+      "layer": 13,
+      "angle_deg": 37.87126575035406,
+      "exp_sign_acc_before": 0.8,
+      "exp_sign_acc_after": 0.6,
+      "exp_gap_delta": -0.20302730798721313
+    },
+    {
+      "layer": 14,
+      "angle_deg": 39.4398091698623,
+      "exp_sign_acc_before": 0.6,
+      "exp_sign_acc_after": 0.6,
+      "exp_gap_delta": 0.014666616916656494
+    },
+    {
+      "layer": 15,
+      "angle_deg": 37.9555385450417,
+      "exp_sign_acc_before": 0.6,
+      "exp_sign_acc_after": 0.6,
+      "exp_gap_delta": 0.23170578479766846
+    },
+    {
+      "layer": 16,
+      "angle_deg": 39.17001282914019,
+      "exp_sign_acc_before": 0.6,
+      "exp_sign_acc_after": 0.9,
+      "exp_gap_delta": 1.1267833709716797
+    },
+    {
+      "layer": 17,
+      "angle_deg": 39.54728947450323,
+      "exp_sign_acc_before": 0.9,
+      "exp_sign_acc_after": 0.6,
+      "exp_gap_delta": -0.2872638702392578
+    },
+    {
+      "layer": 18,
+      "angle_deg": 37.63852248971983,
+      "exp_sign_acc_before": 0.6,
+      "exp_sign_acc_after": 0.7,
+      "exp_gap_delta": 0.35596585273742676
+    },
+    {
+      "layer": 19,
+      "angle_deg": 36.26532137934488,
+      "exp_sign_acc_before": 0.7,
+      "exp_sign_acc_after": 0.7,
+      "exp_gap_delta": 0.6820509433746338
+    },
+    {
+      "layer": 20,
+      "angle_deg": 33.35870283617221,
+      "exp_sign_acc_before": 0.7,
+      "exp_sign_acc_after": 0.7,
+      "exp_gap_delta": -0.06292343139648438
+    },
+    {
+      "layer": 21,
+      "angle_deg": 39.67104335369101,
+      "exp_sign_acc_before": 0.7,
+      "exp_sign_acc_after": 0.9,
+      "exp_gap_delta": 1.1886382102966309
+    },
+    {
+      "layer": 22,
+      "angle_deg": 36.20720686269378,
+      "exp_sign_acc_before": 0.9,
+      "exp_sign_acc_after": 0.9,
+      "exp_gap_delta": 0.15905427932739258
+    },
+    {
+      "layer": 23,
+      "angle_deg": 37.11344892759587,
+      "exp_sign_acc_before": 0.9,
+      "exp_sign_acc_after": 0.8,
+      "exp_gap_delta": 0.565330982208252
+    },
+    {
+      "layer": 24,
+      "angle_deg": 31.47000098605772,
+      "exp_sign_acc_before": 0.8,
+      "exp_sign_acc_after": 0.8,
+      "exp_gap_delta": 0.6812877655029297
+    },
+    {
+      "layer": 25,
+      "angle_deg": 30.93963998155232,
+      "exp_sign_acc_before": 0.8,
+      "exp_sign_acc_after": 0.8,
+      "exp_gap_delta": 0.18981599807739258
+    },
+    {
+      "layer": 26,
+      "angle_deg": 29.29189394765076,
+      "exp_sign_acc_before": 0.8,
+      "exp_sign_acc_after": 0.8,
+      "exp_gap_delta": 1.79270601272583
+    },
+    {
+      "layer": 27,
+      "angle_deg": 31.506863574693586,
+      "exp_sign_acc_before": 0.8,
+      "exp_sign_acc_after": 0.8,
+      "exp_gap_delta": 1.361464500427246
+    },
+    {
+      "layer": 28,
+      "angle_deg": 33.059503946016925,
+      "exp_sign_acc_before": 0.8,
+      "exp_sign_acc_after": 0.9,
+      "exp_gap_delta": 5.205211639404297
+    },
+    {
+      "layer": 29,
+      "angle_deg": 37.53186032320882,
+      "exp_sign_acc_before": 0.9,
+      "exp_sign_acc_after": 0.9,
+      "exp_gap_delta": 1.5728721618652344
+    },
+    {
+      "layer": 30,
+      "angle_deg": 31.398492980750593,
+      "exp_sign_acc_before": 0.9,
+      "exp_sign_acc_after": 0.8,
+      "exp_gap_delta": 1.8471088409423828
+    },
+    {
+      "layer": 31,
+      "angle_deg": 38.47985706294944,
+      "exp_sign_acc_before": 0.8,
+      "exp_sign_acc_after": 0.9,
+      "exp_gap_delta": 8.24624252319336
+    },
+    {
+      "layer": 32,
+      "angle_deg": 27.666627848642857,
+      "exp_sign_acc_before": 0.9,
+      "exp_sign_acc_after": 0.8,
+      "exp_gap_delta": 3.810842514038086
+    },
+    {
+      "layer": 33,
+      "angle_deg": 24.86247840679109,
+      "exp_sign_acc_before": 0.8,
+      "exp_sign_acc_after": 0.9,
+      "exp_gap_delta": 5.70048713684082
+    },
+    {
+      "layer": 34,
+      "angle_deg": 33.18128232091638,
+      "exp_sign_acc_before": 0.9,
+      "exp_sign_acc_after": 1.0,
+      "exp_gap_delta": 21.340312957763672
+    },
+    {
+      "layer": 35,
+      "angle_deg": 29.63965674574396,
+      "exp_sign_acc_before": 1.0,
+      "exp_sign_acc_after": 1.0,
+      "exp_gap_delta": 8.716205596923828
+    },
+    {
+      "layer": 36,
+      "angle_deg": 24.53735129688237,
+      "exp_sign_acc_before": 1.0,
+      "exp_sign_acc_after": 0.9,
+      "exp_gap_delta": 3.3373031616210938
+    },
+    {
+      "layer": 37,
+      "angle_deg": 19.90576837649564,
+      "exp_sign_acc_before": 0.9,
+      "exp_sign_acc_after": 0.9,
+      "exp_gap_delta": 5.762809753417969
+    },
+    {
+      "layer": 38,
+      "angle_deg": 20.842324957882578,
+      "exp_sign_acc_before": 0.9,
+      "exp_sign_acc_after": 0.9,
+      "exp_gap_delta": 11.892074584960938
+    },
+    {
+      "layer": 39,
+      "angle_deg": 19.44937551386564,
+      "exp_sign_acc_before": 0.9,
+      "exp_sign_acc_after": 0.9,
+      "exp_gap_delta": 8.587654113769531
+    },
+    {
+      "layer": 40,
+      "angle_deg": 17.93400073601964,
+      "exp_sign_acc_before": 0.9,
+      "exp_sign_acc_after": 1.0,
+      "exp_gap_delta": 2.347015380859375
+    },
+    {
+      "layer": 41,
+      "angle_deg": 15.914636730648555,
+      "exp_sign_acc_before": 1.0,
+      "exp_sign_acc_after": 1.0,
+      "exp_gap_delta": 5.0109100341796875
+    },
+    {
+      "layer": 42,
+      "angle_deg": 18.876320865200665,
+      "exp_sign_acc_before": 1.0,
+      "exp_sign_acc_after": 0.9,
+      "exp_gap_delta": 5.568534851074219
+    },
+    {
+      "layer": 43,
+      "angle_deg": 15.400203722201832,
+      "exp_sign_acc_before": 0.9,
+      "exp_sign_acc_after": 1.0,
+      "exp_gap_delta": 4.58843994140625
+    },
+    {
+      "layer": 44,
+      "angle_deg": 15.966539520628482,
+      "exp_sign_acc_before": 1.0,
+      "exp_sign_acc_after": 0.9,
+      "exp_gap_delta": 10.07745361328125
+    },
+    {
+      "layer": 45,
+      "angle_deg": 16.94098862706431,
+      "exp_sign_acc_before": 0.9,
+      "exp_sign_acc_after": 0.9,
+      "exp_gap_delta": 5.113029479980469
+    },
+    {
+      "layer": 46,
+      "angle_deg": 17.270405655896006,
+      "exp_sign_acc_before": 0.9,
+      "exp_sign_acc_after": 0.9,
+      "exp_gap_delta": 8.72637939453125
+    },
+    {
+      "layer": 47,
+      "angle_deg": 25.93452938618298,
+      "exp_sign_acc_before": 0.9,
+      "exp_sign_acc_after": 0.9,
+      "exp_gap_delta": 19.10516357421875
+    },
+    {
+      "layer": 48,
+      "angle_deg": 42.49579980917695,
+      "exp_sign_acc_before": 0.9,
+      "exp_sign_acc_after": 0.8,
+      "exp_gap_delta": -106.70021438598633
+    }
+  ]
+}
