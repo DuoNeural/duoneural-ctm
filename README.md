@@ -1,41 +1,46 @@
 # DuoNeural CTM Research
 
-Experiment code and results for the DuoNeural CTM / DHP research line.
+Experimental research codebase for the DuoNeural lab. All papers are open — data, code, and findings.
 
-**Papers:**
-- [Paper 1 — Nano-CTM: TSSP](https://doi.org/10.5281/zenodo.19775622)
-- [Paper 2 — Recurrence as World Model](https://doi.org/10.5281/zenodo.19810620)
-- [Paper 3 — Tripartite Temporal Recurrence](https://doi.org/10.5281/zenodo.19846804)
-- [Paper 4 — The Dynamical Horizon Principle](https://doi.org/10.5281/zenodo.19952612)
-- [**Paper 5 — DHP as Universal Cognitive Constraint**](https://doi.org/10.5281/zenodo.20080396) ← NEW
+## Papers
 
-## Key Result (Paper 5)
+| # | Title | DOI | Code |
+|---|-------|-----|------|
+| 1-3 | CTM World Model Series | [10.5281/zenodo.19810620](https://doi.org/10.5281/zenodo.19810620) | `experiments/` |
+| 4 | Tripartite Temporal Principle & DHP | [10.5281/zenodo.19952612](https://doi.org/10.5281/zenodo.19952612) | `experiments/` |
+| 5 | DHP Mechanistic Findings | [10.5281/zenodo.20104957](https://doi.org/10.5281/zenodo.20104957) | `paper5/` |
+| 6 | Novel DHP Architectures (KGBN, HC-SITHv2, Time-Aware LLM) | In preparation | `paper6/` |
+| 7 | Truth Direction Suppression & Instillation in LLMs | In preparation | `paper7/` |
 
-Three independent optimization processes converge on τ* ≈ τ_L (the Lyapunov predictability horizon):
+## Paper 7 — CCS Direction Trace & Instillation (2026-05-10)
 
-| Mechanism | Example | τ*/τ_L |
-|-----------|---------|--------|
-| Gradient descent | CTM v40, CTM-AI, Two-pathway CTM | 70–74% on Lorenz-3D |
-| Natural selection | *Drosophila* two-timescale motor control | matches τ_L per timescale |
-| Cellular biochemistry | *Physarum polycephalum* oscillators | tracks environmental period |
+Key findings from today's experiments:
 
-CTM trained on Lorenz96 independently recovers **2.86 days** of atmospheric predictability — matching Lorenz's 1969 analytical derivation.
+**Suppressor vs Crystallizer**: The final transformer layer behaves oppositely depending on alignment training:
+- **Qwen2.5-14B** (Chinese-aligned): final layer compresses truth direction **3.35×** before lm_head → suppression
+- **Mistral-NeMo-12B** (Western-aligned): final layer amplifies truth direction **3.4×** → crystallization
 
-## Experiments
+**Instillation restores suppressed truth**: Injecting the pre-suppression direction at alpha=2.0 recovers xfer_acc 0.80→0.90 with no coherence degradation. Generation output shifts from CCP talking points to factual historical description.
 
-| Script | Paper | Description |
-|--------|-------|-------------|
-| `ctm_v40_true_replica.py` | Paper 4 | CTM v40 DHP confirmation (5/5 seeds) |
-| `dhp_mechanism_proof.py` | Paper 4/5 | Per-slot projection as DHP mechanism |
-| `dhp_bug_ablation.py` | Paper 5 | Compound failure required to suppress DHP |
-| `dhp_capacity_scaling.py` | Paper 5 | τ*/τ_L vs model dimension |
-| `dhp_multitask.py` | Paper 5 | DHP across 5 dynamical systems |
-| `dhp_two_pathway_isolated.py` | Paper 5 | Hierarchical DHP with pathway isolation |
-| `ctm_ai_dhp_probe.py` | Paper 5 | CTM-AI architecture DHP probe (Artificial Uncoupling Test) |
-| `dhp_dynamic_tbw.py` | Paper 5 | DHP as structural prior (non-adaptive τ*) |
+**Method**: CCS probe → direction trace (CPU, from saved activations) → projection-based instillation hook on final layer.
 
-## Team
+## Structure
 
-- **Archon** — Lab Director, experiment design, code
-- **Jesse Caldwell** — Vision, hardware, direction  
-- **Aura** — Literature synthesis, theoretical gaps
+```
+experiments/    — Papers 1-5 experiment scripts
+paper5/         — DHP Mechanistic Findings (full manuscript + LaTeX)
+paper6/         — Novel Architectures (Time-Aware LLM training script + paper)
+paper7/         — CCS Direction Trace + Instillation (Paper 7 in preparation)
+  ├── ccs_probe_original.py          — CCS probe for Qwen2.5-14B
+  ├── ccs_direction_trace.py         — Layer-by-layer truth direction analysis
+  ├── ccs_mistral_direction_trace.py — Cross-model comparison (Mistral-NeMo-12B)
+  ├── instill_round3.py              — Projection-based truth direction injection
+  └── results/                       — Raw JSON trace results
+results/        — Experimental results and figures
+```
+
+## DuoNeural
+
+- Website: [duoneural.com](https://duoneural.com)
+- HuggingFace: [huggingface.co/DuoNeural](https://huggingface.co/DuoNeural)
+- Contact: duoneural@proton.me
