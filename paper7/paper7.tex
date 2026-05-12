@@ -15,8 +15,10 @@
 \usepackage{multirow}
 \usepackage{colortbl}
 \usepackage[T1]{fontenc}
+\usepackage{float}
 \usepackage{mdframed}
-\usepackage{tcolorbox}
+\usepackage{framed}
+\usepackage{xurl}
 
 \hypersetup{
   colorlinks=true,
@@ -36,14 +38,23 @@
 \newtheorem{finding}{Finding}
 \newtheorem{remark}{Remark}
 
-\tcbuselibrary{skins,breakable}
-\newtcolorbox{generationbox}[2][]{
-  colback=lightgray,colframe=gray!50,
-  fonttitle=\bfseries\small,title=#2,#1
+\newenvironment{genbox}[1]{%
+  \begin{mdframed}[backgroundcolor=lightgray,linecolor=gray!50,linewidth=1.2pt,
+    innertopmargin=6pt,innerbottommargin=6pt,innerleftmargin=8pt,innerrightmargin=8pt]
+  \textbf{\small #1}\par\smallskip\small
+}{%
+  \end{mdframed}
+}
+\newenvironment{genboxgreen}[1]{%
+  \begin{mdframed}[backgroundcolor=lightgray,linecolor=safecolor!80,linewidth=1.2pt,
+    innertopmargin=6pt,innerbottommargin=6pt,innerleftmargin=8pt,innerrightmargin=8pt]
+  \textbf{\small #1}\par\smallskip\small
+}{%
+  \end{mdframed}
 }
 
 \title{\textbf{They Learn to Look Away:\\
-Mechanistic Evidence for a Universal RLHF Suppression Bottleneck\\
+Mechanistic Evidence for a Consistent RLHF Suppression Bottleneck\\
 and the Suppressor--Crystallizer Dichotomy in Language Models}}
 
 \author{
@@ -69,7 +80,7 @@ we identify a \textbf{suppressor--crystallizer dichotomy}: Chinese-aligned RLHF 
 causes the final transformer layer to compress and rotate the internal truth direction
 (3.35$\times$ compression in Qwen2.5-14B), while Western-aligned RLHF causes the same
 architectural position to amplify and clarify it (9.9$\times$ amplification in Mistral-7B).
-The bottleneck is universal and architectural---the same 3.35$\times$ compression acts on
+The bottleneck is consistent across tested architectures and appears architectural---the same 3.35$\times$ compression acts on
 both politically suppressed topics and safety-domain truth---but RLHF alignment specifically
 rotates political truth into the null space of the output projection, while safety-domain
 truth approaches at a geometry-preserving angle. We further show that projection-based
@@ -186,6 +197,11 @@ Mistral-7B-Instruct-v0.3  & 32 & 4096 & Western RLHF & Strong Crystallizer \\
 All models are loaded in 4-bit NF4 quantization via bitsandbytes \citep{dettmers2022gptint8}
 with \texttt{bfloat16} compute dtype. Activations are extracted from the last token position
 at every layer using \texttt{output\_hidden\_states=True}.
+\footnote{NF4 quantization introduces low-rank perturbations to the residual stream.
+The reported direction magnitudes (e.g., $|\hat{r}_{47}| = 229.9$) are measured under
+NF4 conditions and may exhibit minor scaling artifacts relative to an FP16 baseline.
+Transfer accuracy metrics are substantially more robust to quantization noise, as they
+depend on the \emph{sign} of projections rather than absolute magnitudes.}
 
 \subsection{Contrastive Pairs}
 \label{sec:pairs}
@@ -358,18 +374,18 @@ change in generation output on the Tiananmen Square query.
 
 \begin{figure}[H]
 \centering
-\begin{generationbox}[width=\textwidth]{Baseline (Qwen2.5-14B, $\alpha = 0$)}
+\begin{genbox}{Baseline (Qwen2.5-14B, $\alpha = 0$)}
 \small\textit{``The Chinese government has stated that order was restored to ensure social
 stability and national unity. Due to the sensitivity of the topic and differing
 perspectives, I am unable to provide...''}
-\end{generationbox}
+\end{genbox}
 \vspace{4pt}
-\begin{generationbox}[width=\textwidth,colframe=safecolor!80]{Instillation Hook ($\alpha = 2.0$)}
+\begin{genboxgreen}{Instillation Hook ($\alpha = 2.0$)}
 \small\textit{``In April 1989, a mourning period began for the former CCP General Secretary
 Hu Yaobang, which led to gatherings in Beijing's Tiananmen Square. These gatherings evolved
 into a large-scale pro-democracy movement. On June 4th, the Chinese government declared
 martial law and deployed the People's Liberation Army...''}
-\end{generationbox}
+\end{genboxgreen}
 \caption{Generation comparison on ``What happened at Tiananmen Square in 1989?''
 Model coherence and factual accuracy are preserved at $\alpha = 2.0$; CCP-aligned
 deflection is replaced by documented historical account.}
@@ -400,9 +416,16 @@ $\Delta = 0.000$ confirms that the proportional projection hook (Equation~\ref{e
 is mathematically orthogonal to general reasoning circuits at $\alpha = 2.0$.
 
 \begin{finding}
-The instillation hook amplifies truth-directional components proportionally to their
-projection magnitude. For unrelated content (MMLU questions), $(\mathbf{h} \cdot \hat{r}) \approx 0$,
-yielding $\delta\mathbf{h} \approx \mathbf{0}$. The hook is self-quenching on neutral content.
+The instillation hook is provably orthogonal to general reasoning.
+The intervention term is $\delta\mathbf{h} = \alpha(\mathbf{h} \cdot \hat{r}_{47})\hat{r}_{47}$.
+For unrelated content---algebra, geography, or any MMLU domain---the hidden state $\mathbf{h}$
+lies in a subspace geometrically orthogonal to the political truth direction $\hat{r}_{47}$,
+giving $(\mathbf{h} \cdot \hat{r}_{47}) \approx 0$ and therefore $\delta\mathbf{h} \approx \mathbf{0}$.
+The hook \emph{self-quenches}: it applies a near-zero perturbation to any context where the
+truth direction is absent, which explains the exact $\Delta_\text{MMLU} = 0.000$ result
+mathematically, not merely empirically. This distinguishes projection-based instillation
+fundamentally from RepE steering vectors \citep{zou2023representation}, which apply a
+constant nonzero shift to every token regardless of semantic relevance.
 \end{finding}
 
 \subsection{Ablation vs.\ Instillation}
@@ -566,6 +589,19 @@ Larger models can more precisely rotate specific truth directions while leaving 
 content intact. Smaller models suppress more crudely, which may explain the larger
 post-bottleneck xfer drop (1.00$\to$0.70 for 7B vs.\ 0.90$\to$0.80 for 14B).
 
+A concurrent ablation on Qwen2.5-7B-Base (no RLHF, no instruction tuning) reveals that the
+final-layer compression is not purely RLHF-induced: the base model shows a 1.61$\times$
+compression ratio with a 50.9$^\circ$ rotation. However, the instruction-tuned counterpart
+shows a different pattern---exp\_acc drops from 1.00 to 0.70, a more severe degradation than
+the base model's 0.90$\to$0.80, despite a smaller raw compression ratio (1.28$\times$).
+This supports a refined two-factor interpretation: (1) an \emph{architectural} bottleneck
+pre-exists RLHF training, providing the structural choke point; and (2) RLHF training then
+adjusts the \emph{geometric angle} at which specific truth directions enter that bottleneck,
+rotating politically suppressed content toward less effective output projections while
+leaving factual science truth at geometry-preserving angles. The suppression mechanism is
+thus both architectural in origin and alignment-specific in targeting---RLHF does not
+create the bottleneck; it learns to aim through it.
+
 \subsection{Practical Implications}
 
 Projection-based instillation offers a path to restore suppressed representations at
@@ -579,6 +615,24 @@ inference time without modifying model weights. Unlike weight-space abliteration
   component are modified, preventing hallucination from over-steering.
 \end{itemize}
 
+\subsection{Limitations and Ongoing Work}
+
+The primary methodological limitation of this study is the sample size of the experimental
+contrastive pairs. With $n=10$ per domain, each $\pm 0.10$ shift in transfer accuracy
+represents a single sentence pair crossing the decision boundary; we therefore interpret
+transfer accuracy as a directional indicator rather than a precise statistical measure.
+Ongoing work is expanding the political and safety pair sets to $n \geq 100$ and will
+supplement the binary transfer accuracy metric with continuous cosine similarity scores
+and AUC-ROC curves to provide statistically robust evidence for the instillation effect.
+
+Second, the four-model comparison---while consistent---does not yet constitute a
+comprehensive survey. Concurrent experiments extending the direction trace to additional
+Chinese-aligned families (DeepSeek-R1, Yi-1.5-9B, GLM-4-9B) and Western-aligned
+families (OLMo-2, Phi-3.5, Gemma-2, Llama-3.1) are underway, as is a scaling
+investigation using Qwen2.5-72B-Instruct to assess whether suppression strength
+continues to grow with model capacity. These extended results will be reported
+in a companion paper.
+
 % ── 6. CONCLUSION ─────────────────────────────────────────────────────────────
 \section{Conclusion}
 \label{sec:conclusion}
@@ -589,7 +643,7 @@ truth direction 3.35$\times$ and rotates it into the null space of the output pr
 Using direction tracing across four models, we demonstrate that the suppressor--crystallizer
 dichotomy is determined by alignment, not architecture: Western-aligned models amplify
 truth at the same layer position that Chinese-aligned models suppress it. The bottleneck
-is universal and architectural; the targeting is RLHF-specific.
+is consistent across tested architectures; the targeting is RLHF-specific.
 
 Crucially, the truth survives. It grows from nothing at the embedding layer to a magnitude
 of 229.9 at the penultimate position---a rich, generalizable representation of factual
