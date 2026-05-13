@@ -1,0 +1,284 @@
+[2026-05-10 12:45:11] ======================================================================
+[2026-05-10 12:45:11] DuoNeural Time-Aware LLM — Training Run
+[2026-05-10 12:45:11] d_model=2048, n_heads=16, n_ticks=20
+[2026-05-10 12:45:11] seq_len=512, batch=8×4 (eff)
+[2026-05-10 12:45:11] kappa=1.0, dt=0.1, tssp_λ_max=0.05
+[2026-05-10 12:45:11] ======================================================================
+[2026-05-10 12:45:11] Device: cuda
+[2026-05-10 12:45:11] GPU: NVIDIA GeForce RTX 3090
+[2026-05-10 12:45:11] VRAM: 25.3 GB
+[2026-05-10 12:45:11] Loading GPT-2 tokenizer...
+[2026-05-10 12:45:14] Vocab size: 50257
+[2026-05-10 12:45:14] Loading WikiText-103...
+[2026-05-10 12:45:35] Train docs: 796,652, Val docs: 1,728
+[2026-05-10 12:45:35] Tokenizing dataset...
+[2026-05-10 12:45:35]   Tokenizing doc 0/796652
+[2026-05-10 12:45:38]   Tokenizing doc 10000/796652
+[2026-05-10 12:45:41]   Tokenizing doc 20000/796652
+[2026-05-10 12:45:44]   Tokenizing doc 30000/796652
+[2026-05-10 12:45:47]   Tokenizing doc 40000/796652
+[2026-05-10 12:45:51]   Tokenizing doc 50000/796652
+[2026-05-10 12:45:54]   Tokenizing doc 60000/796652
+[2026-05-10 12:45:57]   Tokenizing doc 70000/796652
+[2026-05-10 12:46:00]   Tokenizing doc 80000/796652
+[2026-05-10 12:46:03]   Tokenizing doc 90000/796652
+[2026-05-10 12:46:06]   Tokenizing doc 100000/796652
+[2026-05-10 12:46:10]   Tokenizing doc 110000/796652
+[2026-05-10 12:46:12]   Tokenizing doc 120000/796652
+[2026-05-10 12:46:15]   Tokenizing doc 130000/796652
+[2026-05-10 12:46:18]   Tokenizing doc 140000/796652
+[2026-05-10 12:46:21]   Tokenizing doc 150000/796652
+[2026-05-10 12:46:24]   Tokenizing doc 160000/796652
+[2026-05-10 12:46:27]   Tokenizing doc 170000/796652
+[2026-05-10 12:46:31]   Tokenizing doc 180000/796652
+[2026-05-10 12:46:34]   Tokenizing doc 190000/796652
+[2026-05-10 12:46:37]   Tokenizing doc 200000/796652
+[2026-05-10 12:46:40]   Tokenizing doc 210000/796652
+[2026-05-10 12:46:43]   Tokenizing doc 220000/796652
+[2026-05-10 12:46:46]   Tokenizing doc 230000/796652
+[2026-05-10 12:46:50]   Tokenizing doc 240000/796652
+[2026-05-10 12:46:53]   Tokenizing doc 250000/796652
+[2026-05-10 12:46:56]   Tokenizing doc 260000/796652
+[2026-05-10 12:46:59]   Tokenizing doc 270000/796652
+[2026-05-10 12:47:02]   Tokenizing doc 280000/796652
+[2026-05-10 12:47:05]   Tokenizing doc 290000/796652
+[2026-05-10 12:47:08]   Tokenizing doc 300000/796652
+[2026-05-10 12:47:11]   Tokenizing doc 310000/796652
+[2026-05-10 12:47:14]   Tokenizing doc 320000/796652
+[2026-05-10 12:47:17]   Tokenizing doc 330000/796652
+[2026-05-10 12:47:20]   Tokenizing doc 340000/796652
+[2026-05-10 12:47:27] Total tokens: 50,000,000, chunks: 97,656
+[2026-05-10 12:47:28] Tokenizing dataset...
+[2026-05-10 12:47:28]   Tokenizing doc 0/1728
+[2026-05-10 12:47:28] Total tokens: 240,016, chunks: 468
+[2026-05-10 12:47:28] Initializing TimeAwareLLM...
+[2026-05-10 12:47:31] Actual params:    44.1M
+[2026-05-10 12:47:31] Total (w/tied):   147.0M
+[2026-05-10 12:47:31] Effective depth:  0.88B (20 ticks)
+[2026-05-10 12:47:34] Using 8-bit AdamW (bitsandbytes)
+[2026-05-10 12:47:34] 
+Starting training: 20000 steps
+[2026-05-10 12:47:34] TSSP schedule: warmup@10% → hold@50% → cosine decay, λ_max=0.05
+[2026-05-10 12:47:34] DHP gate τ* will be logged every 200 steps
+[2026-05-10 12:47:34] ----------------------------------------------------------------------
+[2026-05-10 12:47:34] Config saved: /workspace/time_aware_llm/config.json
+[2026-05-10 12:47:48] step=     0 | train_ppl=51386.84 | val_ppl=51095.06 | tssp=0.0000 λ=0.0000 | τ*=255.5 (49.90% window) | gate_peak=0.002 H=6.238 | lr=0.00e+00 | 0.2min
+[2026-05-10 12:47:49]   ✓ New best val_ppl=51095.06 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 12:50:13] step=   200 | train_ppl=12639.07 | val_ppl=6649.35 | tssp=9.6622 λ=0.0050 | τ*=255.5 (49.90% window) | gate_peak=0.002 H=6.238 | lr=3.00e-05 | 2.6min
+[2026-05-10 12:50:14]   ✓ New best val_ppl=6649.35 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 12:52:39] step=   400 | train_ppl=1387.20 | val_ppl=1022.63 | tssp=1.9721 λ=0.0100 | τ*=255.5 (49.90% window) | gate_peak=0.002 H=6.238 | lr=6.00e-05 | 5.1min
+[2026-05-10 12:52:40]   ✓ New best val_ppl=1022.63 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 12:55:05] step=   600 | train_ppl= 729.42 | val_ppl= 584.22 | tssp=2.0984 λ=0.0150 | τ*=255.5 (49.90% window) | gate_peak=0.002 H=6.238 | lr=9.00e-05 | 7.5min
+[2026-05-10 12:55:06]   ✓ New best val_ppl=584.22 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 12:57:31] step=   800 | train_ppl= 518.04 | val_ppl= 447.88 | tssp=1.6015 λ=0.0200 | τ*=255.6 (49.93% window) | gate_peak=0.002 H=6.238 | lr=1.20e-04 | 9.9min
+[2026-05-10 12:57:32]   ✓ New best val_ppl=447.88 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 12:59:56] step=  1000 | train_ppl= 432.52 | val_ppl= 376.00 | tssp=1.2669 λ=0.0250 | τ*=256.0 (50.00% window) | gate_peak=0.002 H=6.238 | lr=1.50e-04 | 12.4min
+[2026-05-10 12:59:57]   ✓ New best val_ppl=376.00 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 13:02:22] step=  1200 | train_ppl= 384.18 | val_ppl= 336.72 | tssp=1.2131 λ=0.0300 | τ*=256.5 (50.10% window) | gate_peak=0.002 H=6.238 | lr=1.80e-04 | 14.8min
+[2026-05-10 13:02:23]   ✓ New best val_ppl=336.72 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 13:04:48] step=  1400 | train_ppl= 342.53 | val_ppl= 299.07 | tssp=1.1640 λ=0.0350 | τ*=257.3 (50.26% window) | gate_peak=0.002 H=6.238 | lr=2.10e-04 | 17.2min
+[2026-05-10 13:04:50]   ✓ New best val_ppl=299.07 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 13:07:14] step=  1600 | train_ppl= 307.67 | val_ppl= 268.38 | tssp=1.1965 λ=0.0400 | τ*=258.3 (50.45% window) | gate_peak=0.002 H=6.238 | lr=2.40e-04 | 19.7min
+[2026-05-10 13:07:16]   ✓ New best val_ppl=268.38 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 13:09:40] step=  1800 | train_ppl= 287.42 | val_ppl= 254.71 | tssp=1.2910 λ=0.0450 | τ*=259.6 (50.69% window) | gate_peak=0.002 H=6.238 | lr=2.70e-04 | 22.1min
+[2026-05-10 13:09:41]   ✓ New best val_ppl=254.71 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 13:12:06] step=  2000 | train_ppl= 264.43 | val_ppl= 238.16 | tssp=1.4781 λ=0.0500 | τ*=261.0 (50.98% window) | gate_peak=0.002 H=6.238 | lr=3.00e-04 | 24.5min
+[2026-05-10 13:12:07]   ✓ New best val_ppl=238.16 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 13:12:08] Checkpoint: /workspace/time_aware_llm/step_002000.pt
+[2026-05-10 13:14:33] step=  2200 | train_ppl= 246.68 | val_ppl= 220.55 | tssp=1.6739 λ=0.0500 | τ*=262.6 (51.29% window) | gate_peak=0.002 H=6.237 | lr=3.00e-04 | 27.0min
+[2026-05-10 13:14:34]   ✓ New best val_ppl=220.55 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 13:16:59] step=  2400 | train_ppl= 231.64 | val_ppl= 205.45 | tssp=1.7879 λ=0.0500 | τ*=264.1 (51.59% window) | gate_peak=0.002 H=6.236 | lr=3.00e-04 | 29.4min
+[2026-05-10 13:17:00]   ✓ New best val_ppl=205.45 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 13:19:25] step=  2600 | train_ppl= 220.91 | val_ppl= 200.72 | tssp=1.9606 λ=0.0500 | τ*=265.6 (51.87% window) | gate_peak=0.002 H=6.236 | lr=2.99e-04 | 31.8min
+[2026-05-10 13:19:26]   ✓ New best val_ppl=200.72 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 13:21:50] step=  2800 | train_ppl= 207.44 | val_ppl= 190.36 | tssp=2.0474 λ=0.0500 | τ*=266.9 (52.14% window) | gate_peak=0.002 H=6.235 | lr=2.99e-04 | 34.3min
+[2026-05-10 13:21:51]   ✓ New best val_ppl=190.36 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 13:24:16] step=  3000 | train_ppl= 194.76 | val_ppl= 179.36 | tssp=2.1188 λ=0.0500 | τ*=268.2 (52.39% window) | gate_peak=0.002 H=6.234 | lr=2.98e-04 | 36.7min
+[2026-05-10 13:24:17]   ✓ New best val_ppl=179.36 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 13:26:42] step=  3200 | train_ppl= 192.19 | val_ppl= 173.20 | tssp=2.2056 λ=0.0500 | τ*=269.4 (52.63% window) | gate_peak=0.002 H=6.233 | lr=2.97e-04 | 39.1min
+[2026-05-10 13:26:44]   ✓ New best val_ppl=173.20 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 13:29:08] step=  3400 | train_ppl= 184.58 | val_ppl= 167.98 | tssp=2.3391 λ=0.0500 | τ*=270.6 (52.86% window) | gate_peak=0.003 H=6.233 | lr=2.96e-04 | 41.6min
+[2026-05-10 13:29:09]   ✓ New best val_ppl=167.98 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 13:31:34] step=  3600 | train_ppl= 179.06 | val_ppl= 161.16 | tssp=2.3818 λ=0.0500 | τ*=271.8 (53.08% window) | gate_peak=0.003 H=6.232 | lr=2.94e-04 | 44.0min
+[2026-05-10 13:31:35]   ✓ New best val_ppl=161.16 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 13:34:00] step=  3800 | train_ppl= 166.72 | val_ppl= 154.78 | tssp=2.3905 λ=0.0500 | τ*=273.0 (53.31% window) | gate_peak=0.003 H=6.231 | lr=2.93e-04 | 46.4min
+[2026-05-10 13:34:01]   ✓ New best val_ppl=154.78 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 13:36:26] step=  4000 | train_ppl= 161.33 | val_ppl= 149.30 | tssp=2.4518 λ=0.0500 | τ*=274.1 (53.54% window) | gate_peak=0.003 H=6.230 | lr=2.91e-04 | 48.9min
+[2026-05-10 13:36:27]   ✓ New best val_ppl=149.30 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 13:36:28] Checkpoint: /workspace/time_aware_llm/step_004000.pt
+[2026-05-10 13:38:53] step=  4200 | train_ppl= 160.34 | val_ppl= 143.30 | tssp=2.4888 λ=0.0500 | τ*=275.2 (53.75% window) | gate_peak=0.003 H=6.229 | lr=2.89e-04 | 51.3min
+[2026-05-10 13:38:54]   ✓ New best val_ppl=143.30 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 13:41:19] step=  4400 | train_ppl= 151.04 | val_ppl= 139.57 | tssp=2.5473 λ=0.0500 | τ*=276.3 (53.97% window) | gate_peak=0.003 H=6.228 | lr=2.87e-04 | 53.7min
+[2026-05-10 13:41:20]   ✓ New best val_ppl=139.57 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 13:43:45] step=  4600 | train_ppl= 148.48 | val_ppl= 135.33 | tssp=2.5707 λ=0.0500 | τ*=277.4 (54.18% window) | gate_peak=0.003 H=6.227 | lr=2.85e-04 | 56.2min
+[2026-05-10 13:43:46]   ✓ New best val_ppl=135.33 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 13:46:11] step=  4800 | train_ppl= 141.95 | val_ppl= 133.47 | tssp=2.5227 λ=0.0500 | τ*=278.5 (54.39% window) | gate_peak=0.003 H=6.225 | lr=2.82e-04 | 58.6min
+[2026-05-10 13:46:12]   ✓ New best val_ppl=133.47 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 13:48:37] step=  5000 | train_ppl= 140.20 | val_ppl= 129.55 | tssp=2.5541 λ=0.0500 | τ*=279.5 (54.60% window) | gate_peak=0.003 H=6.224 | lr=2.80e-04 | 61.0min
+[2026-05-10 13:48:38]   ✓ New best val_ppl=129.55 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 13:51:03] step=  5200 | train_ppl= 137.93 | val_ppl= 126.53 | tssp=2.6227 λ=0.0500 | τ*=280.6 (54.80% window) | gate_peak=0.003 H=6.223 | lr=2.77e-04 | 63.5min
+[2026-05-10 13:51:04]   ✓ New best val_ppl=126.53 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 13:53:29] step=  5400 | train_ppl= 135.16 | val_ppl= 122.11 | tssp=2.6158 λ=0.0500 | τ*=281.6 (55.00% window) | gate_peak=0.003 H=6.222 | lr=2.74e-04 | 65.9min
+[2026-05-10 13:53:30]   ✓ New best val_ppl=122.11 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 13:55:55] step=  5600 | train_ppl= 129.39 | val_ppl= 119.64 | tssp=2.5573 λ=0.0500 | τ*=282.6 (55.19% window) | gate_peak=0.003 H=6.220 | lr=2.71e-04 | 68.3min
+[2026-05-10 13:55:56]   ✓ New best val_ppl=119.64 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 13:58:21] step=  5800 | train_ppl= 129.83 | val_ppl= 116.08 | tssp=2.5722 λ=0.0500 | τ*=283.5 (55.38% window) | gate_peak=0.003 H=6.219 | lr=2.68e-04 | 70.8min
+[2026-05-10 13:58:22]   ✓ New best val_ppl=116.08 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 14:00:47] step=  6000 | train_ppl= 121.46 | val_ppl= 115.35 | tssp=2.5945 λ=0.0500 | τ*=284.5 (55.56% window) | gate_peak=0.003 H=6.218 | lr=2.65e-04 | 73.2min
+[2026-05-10 14:00:48]   ✓ New best val_ppl=115.35 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 14:00:48] Checkpoint: /workspace/time_aware_llm/step_006000.pt
+[2026-05-10 14:03:13] step=  6200 | train_ppl= 122.10 | val_ppl= 112.10 | tssp=2.5773 λ=0.0500 | τ*=285.4 (55.74% window) | gate_peak=0.003 H=6.217 | lr=2.61e-04 | 75.7min
+[2026-05-10 14:03:14]   ✓ New best val_ppl=112.10 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 14:05:39] step=  6400 | train_ppl= 117.37 | val_ppl= 109.44 | tssp=2.5503 λ=0.0500 | τ*=286.3 (55.92% window) | gate_peak=0.003 H=6.215 | lr=2.58e-04 | 78.1min
+[2026-05-10 14:05:40]   ✓ New best val_ppl=109.44 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 14:08:05] step=  6600 | train_ppl= 118.87 | val_ppl= 107.82 | tssp=2.5106 λ=0.0500 | τ*=287.2 (56.09% window) | gate_peak=0.003 H=6.214 | lr=2.54e-04 | 80.5min
+[2026-05-10 14:08:06]   ✓ New best val_ppl=107.82 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 14:10:31] step=  6800 | train_ppl= 115.49 | val_ppl= 106.33 | tssp=2.5433 λ=0.0500 | τ*=288.0 (56.25% window) | gate_peak=0.003 H=6.213 | lr=2.50e-04 | 82.9min
+[2026-05-10 14:10:32]   ✓ New best val_ppl=106.33 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 14:12:57] step=  7000 | train_ppl= 114.04 | val_ppl= 103.81 | tssp=2.5102 λ=0.0500 | τ*=288.8 (56.41% window) | gate_peak=0.003 H=6.211 | lr=2.46e-04 | 85.4min
+[2026-05-10 14:12:58]   ✓ New best val_ppl=103.81 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 14:15:23] step=  7200 | train_ppl= 108.97 | val_ppl= 101.00 | tssp=2.4718 λ=0.0500 | τ*=289.6 (56.57% window) | gate_peak=0.003 H=6.210 | lr=2.42e-04 | 87.8min
+[2026-05-10 14:15:24]   ✓ New best val_ppl=101.00 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 14:17:49] step=  7400 | train_ppl= 108.52 | val_ppl= 100.25 | tssp=2.4749 λ=0.0500 | τ*=290.4 (56.72% window) | gate_peak=0.003 H=6.209 | lr=2.38e-04 | 90.2min
+[2026-05-10 14:17:50]   ✓ New best val_ppl=100.25 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 14:20:15] step=  7600 | train_ppl= 106.19 | val_ppl=  99.50 | tssp=2.4833 λ=0.0500 | τ*=291.2 (56.87% window) | gate_peak=0.003 H=6.208 | lr=2.34e-04 | 92.7min
+[2026-05-10 14:20:16]   ✓ New best val_ppl=99.50 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 14:22:41] step=  7800 | train_ppl= 102.27 | val_ppl=  96.79 | tssp=2.4627 λ=0.0500 | τ*=291.9 (57.01% window) | gate_peak=0.003 H=6.206 | lr=2.29e-04 | 95.1min
+[2026-05-10 14:22:42]   ✓ New best val_ppl=96.79 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 14:25:07] step=  8000 | train_ppl= 105.12 | val_ppl=  95.53 | tssp=2.4482 λ=0.0500 | τ*=292.6 (57.15% window) | gate_peak=0.003 H=6.205 | lr=2.25e-04 | 97.5min
+[2026-05-10 14:25:08]   ✓ New best val_ppl=95.53 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 14:25:08] Checkpoint: /workspace/time_aware_llm/step_008000.pt
+[2026-05-10 14:27:33] step=  8200 | train_ppl= 101.15 | val_ppl=  93.88 | tssp=2.4358 λ=0.0500 | τ*=293.3 (57.28% window) | gate_peak=0.003 H=6.204 | lr=2.20e-04 | 100.0min
+[2026-05-10 14:27:34]   ✓ New best val_ppl=93.88 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 14:29:59] step=  8400 | train_ppl=  98.03 | val_ppl=  92.25 | tssp=2.4246 λ=0.0500 | τ*=293.9 (57.41% window) | gate_peak=0.003 H=6.203 | lr=2.16e-04 | 102.4min
+[2026-05-10 14:30:00]   ✓ New best val_ppl=92.25 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 14:32:25] step=  8600 | train_ppl=  98.58 | val_ppl=  90.77 | tssp=2.3892 λ=0.0500 | τ*=294.6 (57.53% window) | gate_peak=0.003 H=6.201 | lr=2.11e-04 | 104.9min
+[2026-05-10 14:32:26]   ✓ New best val_ppl=90.77 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 14:34:51] step=  8800 | train_ppl=  96.47 | val_ppl=  90.33 | tssp=2.3973 λ=0.0500 | τ*=295.2 (57.65% window) | gate_peak=0.004 H=6.200 | lr=2.06e-04 | 107.3min
+[2026-05-10 14:34:52]   ✓ New best val_ppl=90.33 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 14:37:17] step=  9000 | train_ppl=  95.92 | val_ppl=  88.70 | tssp=2.3579 λ=0.0500 | τ*=295.8 (57.77% window) | gate_peak=0.004 H=6.199 | lr=2.01e-04 | 109.7min
+[2026-05-10 14:37:18]   ✓ New best val_ppl=88.70 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 14:39:43] step=  9200 | train_ppl=  94.79 | val_ppl=  87.31 | tssp=2.3129 λ=0.0500 | τ*=296.4 (57.89% window) | gate_peak=0.004 H=6.198 | lr=1.96e-04 | 112.1min
+[2026-05-10 14:39:44]   ✓ New best val_ppl=87.31 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 14:42:09] step=  9400 | train_ppl=  93.06 | val_ppl=  86.21 | tssp=2.3111 λ=0.0500 | τ*=296.9 (58.00% window) | gate_peak=0.004 H=6.197 | lr=1.91e-04 | 114.6min
+[2026-05-10 14:42:10]   ✓ New best val_ppl=86.21 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 14:44:35] step=  9600 | train_ppl=  92.34 | val_ppl=  84.92 | tssp=2.2839 λ=0.0500 | τ*=297.5 (58.10% window) | gate_peak=0.004 H=6.196 | lr=1.86e-04 | 117.0min
+[2026-05-10 14:44:36]   ✓ New best val_ppl=84.92 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 14:47:01] step=  9800 | train_ppl=  90.56 | val_ppl=  83.59 | tssp=2.2659 λ=0.0500 | τ*=298.0 (58.20% window) | gate_peak=0.004 H=6.195 | lr=1.81e-04 | 119.5min
+[2026-05-10 14:47:02]   ✓ New best val_ppl=83.59 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 14:49:27] step= 10000 | train_ppl=  85.30 | val_ppl=  82.71 | tssp=2.2458 λ=0.0500 | τ*=298.5 (58.30% window) | gate_peak=0.004 H=6.194 | lr=1.76e-04 | 121.9min
+[2026-05-10 14:49:28]   ✓ New best val_ppl=82.71 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 14:49:29] Checkpoint: /workspace/time_aware_llm/step_010000.pt
+[2026-05-10 14:51:54] step= 10200 | train_ppl=  88.99 | val_ppl=  81.57 | tssp=2.2148 λ=0.0500 | τ*=299.0 (58.39% window) | gate_peak=0.004 H=6.193 | lr=1.71e-04 | 124.3min
+[2026-05-10 14:51:55]   ✓ New best val_ppl=81.57 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 14:54:19] step= 10400 | train_ppl=  87.38 | val_ppl=  80.71 | tssp=2.1952 λ=0.0498 | τ*=299.4 (58.48% window) | gate_peak=0.004 H=6.192 | lr=1.66e-04 | 126.8min
+[2026-05-10 14:54:21]   ✓ New best val_ppl=80.71 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 14:56:45] step= 10600 | train_ppl=  86.64 | val_ppl=  79.41 | tssp=2.1641 λ=0.0496 | τ*=299.9 (58.56% window) | gate_peak=0.004 H=6.191 | lr=1.60e-04 | 129.2min
+[2026-05-10 14:56:46]   ✓ New best val_ppl=79.41 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 14:59:11] step= 10800 | train_ppl=  83.63 | val_ppl=  78.15 | tssp=2.1406 λ=0.0492 | τ*=300.3 (58.65% window) | gate_peak=0.004 H=6.190 | lr=1.55e-04 | 131.6min
+[2026-05-10 14:59:12]   ✓ New best val_ppl=78.15 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 15:01:37] step= 11000 | train_ppl=  82.41 | val_ppl=  77.29 | tssp=2.0974 λ=0.0488 | τ*=300.7 (58.73% window) | gate_peak=0.004 H=6.189 | lr=1.50e-04 | 134.0min
+[2026-05-10 15:01:38]   ✓ New best val_ppl=77.29 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 15:04:03] step= 11200 | train_ppl=  81.98 | val_ppl=  76.23 | tssp=2.0787 λ=0.0482 | τ*=301.1 (58.80% window) | gate_peak=0.004 H=6.188 | lr=1.45e-04 | 136.5min
+[2026-05-10 15:04:04]   ✓ New best val_ppl=76.23 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 15:06:29] step= 11400 | train_ppl=  80.64 | val_ppl=  75.40 | tssp=2.0472 λ=0.0476 | τ*=301.4 (58.87% window) | gate_peak=0.004 H=6.187 | lr=1.40e-04 | 138.9min
+[2026-05-10 15:06:30]   ✓ New best val_ppl=75.40 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 15:08:55] step= 11600 | train_ppl=  79.17 | val_ppl=  74.62 | tssp=2.0407 λ=0.0469 | τ*=301.8 (58.94% window) | gate_peak=0.004 H=6.187 | lr=1.34e-04 | 141.3min
+[2026-05-10 15:08:56]   ✓ New best val_ppl=74.62 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 15:11:21] step= 11800 | train_ppl=  79.37 | val_ppl=  73.60 | tssp=2.0057 λ=0.0461 | τ*=302.1 (59.01% window) | gate_peak=0.004 H=6.186 | lr=1.29e-04 | 143.8min
+[2026-05-10 15:11:22]   ✓ New best val_ppl=73.60 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 15:13:47] step= 12000 | train_ppl=  75.82 | val_ppl=  72.64 | tssp=1.9681 λ=0.0452 | τ*=302.4 (59.07% window) | gate_peak=0.004 H=6.185 | lr=1.24e-04 | 146.2min
+[2026-05-10 15:13:48]   ✓ New best val_ppl=72.64 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 15:13:48] Checkpoint: /workspace/time_aware_llm/step_012000.pt
+[2026-05-10 15:16:13] step= 12200 | train_ppl=  76.44 | val_ppl=  71.50 | tssp=1.9594 λ=0.0443 | τ*=302.7 (59.13% window) | gate_peak=0.004 H=6.184 | lr=1.19e-04 | 148.7min
+[2026-05-10 15:16:14]   ✓ New best val_ppl=71.50 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 15:18:40] step= 12400 | train_ppl=  68.58 | val_ppl=  71.05 | tssp=1.9342 λ=0.0432 | τ*=303.0 (59.18% window) | gate_peak=0.004 H=6.184 | lr=1.14e-04 | 151.1min
+[2026-05-10 15:18:41]   ✓ New best val_ppl=71.05 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 15:21:06] step= 12600 | train_ppl=  69.49 | val_ppl=  70.45 | tssp=1.9050 λ=0.0421 | τ*=303.3 (59.23% window) | gate_peak=0.004 H=6.183 | lr=1.09e-04 | 153.5min
+[2026-05-10 15:21:07]   ✓ New best val_ppl=70.45 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 15:23:32] step= 12800 | train_ppl=  68.80 | val_ppl=  70.04 | tssp=1.8800 λ=0.0409 | τ*=303.5 (59.28% window) | gate_peak=0.004 H=6.183 | lr=1.04e-04 | 156.0min
+[2026-05-10 15:23:33]   ✓ New best val_ppl=70.04 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 15:25:58] step= 13000 | train_ppl=  68.45 | val_ppl=  69.01 | tssp=1.8581 λ=0.0397 | τ*=303.8 (59.33% window) | gate_peak=0.004 H=6.182 | lr=9.87e-05 | 158.4min
+[2026-05-10 15:25:59]   ✓ New best val_ppl=69.01 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 15:28:24] step= 13200 | train_ppl=  66.44 | val_ppl=  68.10 | tssp=1.8391 λ=0.0384 | τ*=304.0 (59.37% window) | gate_peak=0.004 H=6.181 | lr=9.38e-05 | 160.8min
+[2026-05-10 15:28:25]   ✓ New best val_ppl=68.10 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 15:30:50] step= 13400 | train_ppl=  65.97 | val_ppl=  67.82 | tssp=1.8111 λ=0.0370 | τ*=304.2 (59.41% window) | gate_peak=0.004 H=6.181 | lr=8.90e-05 | 163.3min
+[2026-05-10 15:30:51]   ✓ New best val_ppl=67.82 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 15:33:16] step= 13600 | train_ppl=  66.58 | val_ppl=  67.07 | tssp=1.7993 λ=0.0356 | τ*=304.4 (59.45% window) | gate_peak=0.004 H=6.180 | lr=8.42e-05 | 165.7min
+[2026-05-10 15:33:17]   ✓ New best val_ppl=67.07 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 15:35:42] step= 13800 | train_ppl=  62.61 | val_ppl=  66.36 | tssp=1.7701 λ=0.0342 | τ*=304.6 (59.49% window) | gate_peak=0.004 H=6.180 | lr=7.96e-05 | 168.1min
+[2026-05-10 15:35:43]   ✓ New best val_ppl=66.36 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 15:38:08] step= 14000 | train_ppl=  64.93 | val_ppl=  66.09 | tssp=1.7504 λ=0.0327 | τ*=304.7 (59.52% window) | gate_peak=0.004 H=6.180 | lr=7.50e-05 | 170.6min
+[2026-05-10 15:38:09]   ✓ New best val_ppl=66.09 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 15:38:09] Checkpoint: /workspace/time_aware_llm/step_014000.pt
+[2026-05-10 15:40:34] step= 14200 | train_ppl=  66.19 | val_ppl=  65.45 | tssp=1.7202 λ=0.0312 | τ*=304.9 (59.55% window) | gate_peak=0.004 H=6.179 | lr=7.05e-05 | 173.0min
+[2026-05-10 15:40:35]   ✓ New best val_ppl=65.45 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 15:43:00] step= 14400 | train_ppl=  64.51 | val_ppl=  64.81 | tssp=1.7074 λ=0.0297 | τ*=305.0 (59.58% window) | gate_peak=0.004 H=6.179 | lr=6.61e-05 | 175.4min
+[2026-05-10 15:43:01]   ✓ New best val_ppl=64.81 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 15:45:26] step= 14600 | train_ppl=  63.51 | val_ppl=  64.38 | tssp=1.6876 λ=0.0281 | τ*=305.2 (59.61% window) | gate_peak=0.004 H=6.179 | lr=6.18e-05 | 177.9min
+[2026-05-10 15:45:27]   ✓ New best val_ppl=64.38 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 15:47:52] step= 14800 | train_ppl=  62.88 | val_ppl=  63.76 | tssp=1.6694 λ=0.0266 | τ*=305.3 (59.63% window) | gate_peak=0.004 H=6.178 | lr=5.77e-05 | 180.3min
+[2026-05-10 15:47:53]   ✓ New best val_ppl=63.76 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 15:50:18] step= 15000 | train_ppl=  61.44 | val_ppl=  63.14 | tssp=1.6451 λ=0.0250 | τ*=305.4 (59.65% window) | gate_peak=0.004 H=6.178 | lr=5.36e-05 | 182.7min
+[2026-05-10 15:50:19]   ✓ New best val_ppl=63.14 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 15:52:44] step= 15200 | train_ppl=  62.82 | val_ppl=  62.92 | tssp=1.6208 λ=0.0234 | τ*=305.5 (59.67% window) | gate_peak=0.004 H=6.178 | lr=4.96e-05 | 185.2min
+[2026-05-10 15:52:45]   ✓ New best val_ppl=62.92 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 15:55:09] step= 15400 | train_ppl=  60.86 | val_ppl=  62.69 | tssp=1.6231 λ=0.0219 | τ*=305.6 (59.69% window) | gate_peak=0.004 H=6.178 | lr=4.58e-05 | 187.6min
+[2026-05-10 15:55:10]   ✓ New best val_ppl=62.69 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 15:57:35] step= 15600 | train_ppl=  60.73 | val_ppl=  62.21 | tssp=1.5964 λ=0.0203 | τ*=305.7 (59.71% window) | gate_peak=0.004 H=6.177 | lr=4.21e-05 | 190.0min
+[2026-05-10 15:57:36]   ✓ New best val_ppl=62.21 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 16:00:01] step= 15800 | train_ppl=  60.93 | val_ppl=  61.78 | tssp=1.5813 λ=0.0188 | τ*=305.8 (59.73% window) | gate_peak=0.004 H=6.177 | lr=3.85e-05 | 192.4min
+[2026-05-10 16:00:02]   ✓ New best val_ppl=61.78 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 16:02:27] step= 16000 | train_ppl=  62.03 | val_ppl=  61.38 | tssp=1.5690 λ=0.0173 | τ*=305.9 (59.74% window) | gate_peak=0.004 H=6.177 | lr=3.51e-05 | 194.9min
+[2026-05-10 16:02:28]   ✓ New best val_ppl=61.38 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 16:02:28] Checkpoint: /workspace/time_aware_llm/step_016000.pt
+[2026-05-10 16:04:53] step= 16200 | train_ppl=  60.95 | val_ppl=  61.06 | tssp=1.5541 λ=0.0158 | τ*=305.9 (59.75% window) | gate_peak=0.004 H=6.177 | lr=3.18e-05 | 197.3min
+[2026-05-10 16:04:54]   ✓ New best val_ppl=61.06 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 16:07:19] step= 16400 | train_ppl=  59.74 | val_ppl=  60.75 | tssp=1.5327 λ=0.0144 | τ*=306.0 (59.77% window) | gate_peak=0.004 H=6.177 | lr=2.86e-05 | 199.7min
+[2026-05-10 16:07:20]   ✓ New best val_ppl=60.75 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 16:09:45] step= 16600 | train_ppl=  57.96 | val_ppl=  60.39 | tssp=1.5335 λ=0.0130 | τ*=306.0 (59.78% window) | gate_peak=0.004 H=6.176 | lr=2.56e-05 | 202.2min
+[2026-05-10 16:09:46]   ✓ New best val_ppl=60.39 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 16:12:11] step= 16800 | train_ppl=  58.24 | val_ppl=  60.14 | tssp=1.5163 λ=0.0116 | τ*=306.1 (59.78% window) | gate_peak=0.004 H=6.176 | lr=2.28e-05 | 204.6min
+[2026-05-10 16:12:12]   ✓ New best val_ppl=60.14 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 16:14:37] step= 17000 | train_ppl=  58.63 | val_ppl=  59.81 | tssp=1.5021 λ=0.0103 | τ*=306.1 (59.79% window) | gate_peak=0.004 H=6.176 | lr=2.01e-05 | 207.0min
+[2026-05-10 16:14:39]   ✓ New best val_ppl=59.81 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 16:17:04] step= 17200 | train_ppl=  57.21 | val_ppl=  59.69 | tssp=1.4987 λ=0.0091 | τ*=306.2 (59.80% window) | gate_peak=0.004 H=6.176 | lr=1.76e-05 | 209.5min
+[2026-05-10 16:17:05]   ✓ New best val_ppl=59.69 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 16:19:30] step= 17400 | train_ppl=  58.24 | val_ppl=  59.42 | tssp=1.4853 λ=0.0079 | τ*=306.2 (59.81% window) | gate_peak=0.004 H=6.176 | lr=1.52e-05 | 211.9min
+[2026-05-10 16:19:31]   ✓ New best val_ppl=59.42 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 16:21:56] step= 17600 | train_ppl=  56.44 | val_ppl=  59.19 | tssp=1.4856 λ=0.0068 | τ*=306.2 (59.81% window) | gate_peak=0.004 H=6.176 | lr=1.30e-05 | 214.4min
+[2026-05-10 16:21:57]   ✓ New best val_ppl=59.19 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 16:24:22] step= 17800 | train_ppl=  56.37 | val_ppl=  59.08 | tssp=1.4668 λ=0.0057 | τ*=306.3 (59.82% window) | gate_peak=0.004 H=6.176 | lr=1.09e-05 | 216.8min
+[2026-05-10 16:24:23]   ✓ New best val_ppl=59.08 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 16:26:47] step= 18000 | train_ppl=  58.02 | val_ppl=  58.90 | tssp=1.4537 λ=0.0048 | τ*=306.3 (59.82% window) | gate_peak=0.004 H=6.176 | lr=9.05e-06 | 219.2min
+[2026-05-10 16:26:48]   ✓ New best val_ppl=58.90 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 16:26:49] Checkpoint: /workspace/time_aware_llm/step_018000.pt
+[2026-05-10 16:29:14] step= 18200 | train_ppl=  58.04 | val_ppl=  58.73 | tssp=1.4554 λ=0.0039 | τ*=306.3 (59.82% window) | gate_peak=0.004 H=6.176 | lr=7.34e-06 | 221.7min
+[2026-05-10 16:29:15]   ✓ New best val_ppl=58.73 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 16:31:40] step= 18400 | train_ppl=  57.21 | val_ppl=  58.59 | tssp=1.4466 λ=0.0031 | τ*=306.3 (59.82% window) | gate_peak=0.004 H=6.176 | lr=5.81e-06 | 224.1min
+[2026-05-10 16:31:41]   ✓ New best val_ppl=58.59 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 16:34:06] step= 18600 | train_ppl=  57.87 | val_ppl=  58.51 | tssp=1.4454 λ=0.0024 | τ*=306.3 (59.83% window) | gate_peak=0.004 H=6.176 | lr=4.46e-06 | 226.5min
+[2026-05-10 16:34:07]   ✓ New best val_ppl=58.51 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 16:36:32] step= 18800 | train_ppl=  57.05 | val_ppl=  58.41 | tssp=1.4378 λ=0.0018 | τ*=306.3 (59.83% window) | gate_peak=0.004 H=6.176 | lr=3.28e-06 | 229.0min
+[2026-05-10 16:36:33]   ✓ New best val_ppl=58.41 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 16:38:58] step= 19000 | train_ppl=  57.43 | val_ppl=  58.34 | tssp=1.4408 λ=0.0012 | τ*=306.3 (59.83% window) | gate_peak=0.004 H=6.176 | lr=2.28e-06 | 231.4min
+[2026-05-10 16:38:59]   ✓ New best val_ppl=58.34 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 16:41:24] step= 19200 | train_ppl=  57.23 | val_ppl=  58.30 | tssp=1.4389 λ=0.0008 | τ*=306.3 (59.83% window) | gate_peak=0.004 H=6.176 | lr=1.46e-06 | 233.8min
+[2026-05-10 16:41:26]   ✓ New best val_ppl=58.30 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 16:43:50] step= 19400 | train_ppl=  57.23 | val_ppl=  58.28 | tssp=1.4336 λ=0.0004 | τ*=306.3 (59.83% window) | gate_peak=0.004 H=6.176 | lr=8.22e-07 | 236.3min
+[2026-05-10 16:43:51]   ✓ New best val_ppl=58.28 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 16:46:16] step= 19600 | train_ppl=  56.91 | val_ppl=  58.26 | tssp=1.4392 λ=0.0002 | τ*=306.3 (59.83% window) | gate_peak=0.004 H=6.176 | lr=3.65e-07 | 238.7min
+[2026-05-10 16:46:17]   ✓ New best val_ppl=58.26 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 16:48:42] step= 19800 | train_ppl=  58.32 | val_ppl=  58.26 | tssp=1.4404 λ=0.0000 | τ*=306.3 (59.83% window) | gate_peak=0.004 H=6.176 | lr=9.14e-08 | 241.1min
+[2026-05-10 16:48:43]   ✓ New best val_ppl=58.26 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 16:51:07] step= 19999 | train_ppl=  57.63 | val_ppl=  58.26 | tssp=1.4318 λ=0.0000 | τ*=306.3 (59.83% window) | gate_peak=0.004 H=6.176 | lr=2.28e-12 | 243.6min
+[2026-05-10 16:51:09]   ✓ New best val_ppl=58.26 → saved /workspace/time_aware_llm/best.pt
+[2026-05-10 16:51:11] 
+Training complete! Best val_ppl=58.26
+[2026-05-10 16:51:11] Final checkpoint: /workspace/time_aware_llm/final.pt
+[2026-05-10 16:51:11] 
+Final DHP Gate Analysis:
+[2026-05-10 16:51:11]   τ* = 306.3 tokens (59.83% of window)
+[2026-05-10 16:51:11]   Peakedness = 0.0041, Entropy = 6.1758
+[2026-05-10 16:51:11]   Expected τ*/window ≈ 0.72 if DHP converged
+[2026-05-10 16:51:11]   (DHP Token Horizon exp found τ_L_text ≈ 64 tokens at byte level)

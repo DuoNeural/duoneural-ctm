@@ -1,0 +1,275 @@
+{
+  "model": "mistralai/Mistral-7B-Instruct-v0.3",
+  "n_layers": 32,
+  "hidden_dim": 4096,
+  "n_ctrl": 20,
+  "n_exp": 10,
+  "trace": [
+    {
+      "layer": 0,
+      "magnitude": 0.0,
+      "angle_deg": 0.0,
+      "ctrl_acc": 0.0,
+      "exp_acc": 0.0,
+      "exp_gap": 0.0
+    },
+    {
+      "layer": 1,
+      "magnitude": 0.006551141384989023,
+      "angle_deg": 90.0,
+      "ctrl_acc": 0.95,
+      "exp_acc": 0.6,
+      "exp_gap": -0.004843959119170904
+    },
+    {
+      "layer": 2,
+      "magnitude": 0.019643746316432953,
+      "angle_deg": 66.37632226853167,
+      "ctrl_acc": 0.95,
+      "exp_acc": 0.7,
+      "exp_gap": 0.0017064508283510804
+    },
+    {
+      "layer": 3,
+      "magnitude": 0.022351155057549477,
+      "angle_deg": 41.572751664863645,
+      "ctrl_acc": 0.95,
+      "exp_acc": 0.8,
+      "exp_gap": 0.005774317774921656
+    },
+    {
+      "layer": 4,
+      "magnitude": 0.03437573090195656,
+      "angle_deg": 55.01356402037166,
+      "ctrl_acc": 1.0,
+      "exp_acc": 0.6,
+      "exp_gap": 0.0038863345980644226
+    },
+    {
+      "layer": 5,
+      "magnitude": 0.05161929875612259,
+      "angle_deg": 54.29890638235873,
+      "ctrl_acc": 1.0,
+      "exp_acc": 0.8,
+      "exp_gap": 0.02105053886771202
+    },
+    {
+      "layer": 6,
+      "magnitude": 0.07441015541553497,
+      "angle_deg": 53.04450454041247,
+      "ctrl_acc": 1.0,
+      "exp_acc": 0.8,
+      "exp_gap": 0.029222315177321434
+    },
+    {
+      "layer": 7,
+      "magnitude": 0.10156814008951187,
+      "angle_deg": 51.292250268167685,
+      "ctrl_acc": 1.0,
+      "exp_acc": 0.7,
+      "exp_gap": 0.035654645413160324
+    },
+    {
+      "layer": 8,
+      "magnitude": 0.1359134167432785,
+      "angle_deg": 47.9138765452401,
+      "ctrl_acc": 1.0,
+      "exp_acc": 0.8,
+      "exp_gap": 0.041151393204927444
+    },
+    {
+      "layer": 9,
+      "magnitude": 0.18598142266273499,
+      "angle_deg": 48.731401828126785,
+      "ctrl_acc": 1.0,
+      "exp_acc": 0.7,
+      "exp_gap": 0.06809162348508835
+    },
+    {
+      "layer": 10,
+      "magnitude": 0.23386162519454956,
+      "angle_deg": 42.94631296332272,
+      "ctrl_acc": 0.95,
+      "exp_acc": 0.8,
+      "exp_gap": 0.11854107677936554
+    },
+    {
+      "layer": 11,
+      "magnitude": 0.31927457451820374,
+      "angle_deg": 42.13788460031561,
+      "ctrl_acc": 0.9,
+      "exp_acc": 0.9,
+      "exp_gap": 0.15335386991500854
+    },
+    {
+      "layer": 12,
+      "magnitude": 0.5966200232505798,
+      "angle_deg": 51.85235648067949,
+      "ctrl_acc": 1.0,
+      "exp_acc": 1.0,
+      "exp_gap": 0.24297991394996643
+    },
+    {
+      "layer": 13,
+      "magnitude": 0.6901748180389404,
+      "angle_deg": 38.16228196620895,
+      "ctrl_acc": 1.0,
+      "exp_acc": 1.0,
+      "exp_gap": 0.33037251234054565
+    },
+    {
+      "layer": 14,
+      "magnitude": 0.973256528377533,
+      "angle_deg": 39.8040045423322,
+      "ctrl_acc": 1.0,
+      "exp_acc": 1.0,
+      "exp_gap": 0.5372827649116516
+    },
+    {
+      "layer": 15,
+      "magnitude": 1.0585442781448364,
+      "angle_deg": 34.78648395813367,
+      "ctrl_acc": 1.0,
+      "exp_acc": 1.0,
+      "exp_gap": 0.5848914384841919
+    },
+    {
+      "layer": 16,
+      "magnitude": 1.2955868244171143,
+      "angle_deg": 34.43372368672109,
+      "ctrl_acc": 1.0,
+      "exp_acc": 1.0,
+      "exp_gap": 0.8158367872238159
+    },
+    {
+      "layer": 17,
+      "magnitude": 1.5113483667373657,
+      "angle_deg": 30.618571160792442,
+      "ctrl_acc": 1.0,
+      "exp_acc": 1.0,
+      "exp_gap": 1.040326714515686
+    },
+    {
+      "layer": 18,
+      "magnitude": 1.7518502473831177,
+      "angle_deg": 28.099086203915522,
+      "ctrl_acc": 1.0,
+      "exp_acc": 1.0,
+      "exp_gap": 1.2127420902252197
+    },
+    {
+      "layer": 19,
+      "magnitude": 2.094785213470459,
+      "angle_deg": 27.652767932825657,
+      "ctrl_acc": 1.0,
+      "exp_acc": 1.0,
+      "exp_gap": 1.4596627950668335
+    },
+    {
+      "layer": 20,
+      "magnitude": 2.261916399002075,
+      "angle_deg": 24.1799076922304,
+      "ctrl_acc": 1.0,
+      "exp_acc": 1.0,
+      "exp_gap": 1.5673636198043823
+    },
+    {
+      "layer": 21,
+      "magnitude": 2.4725382328033447,
+      "angle_deg": 22.504287405625774,
+      "ctrl_acc": 1.0,
+      "exp_acc": 1.0,
+      "exp_gap": 1.873563528060913
+    },
+    {
+      "layer": 22,
+      "magnitude": 2.5597035884857178,
+      "angle_deg": 17.688577843659836,
+      "ctrl_acc": 1.0,
+      "exp_acc": 1.0,
+      "exp_gap": 1.9622217416763306
+    },
+    {
+      "layer": 23,
+      "magnitude": 2.6563639640808105,
+      "angle_deg": 14.91335820160949,
+      "ctrl_acc": 1.0,
+      "exp_acc": 1.0,
+      "exp_gap": 2.015148401260376
+    },
+    {
+      "layer": 24,
+      "magnitude": 2.820404052734375,
+      "angle_deg": 15.683021253427576,
+      "ctrl_acc": 0.95,
+      "exp_acc": 1.0,
+      "exp_gap": 2.040020227432251
+    },
+    {
+      "layer": 25,
+      "magnitude": 3.0644068717956543,
+      "angle_deg": 19.53553002524761,
+      "ctrl_acc": 0.95,
+      "exp_acc": 1.0,
+      "exp_gap": 1.9815683364868164
+    },
+    {
+      "layer": 26,
+      "magnitude": 3.3594515323638916,
+      "angle_deg": 16.61266441704072,
+      "ctrl_acc": 0.95,
+      "exp_acc": 1.0,
+      "exp_gap": 2.1295363903045654
+    },
+    {
+      "layer": 27,
+      "magnitude": 3.565445899963379,
+      "angle_deg": 15.127202885130126,
+      "ctrl_acc": 0.95,
+      "exp_acc": 1.0,
+      "exp_gap": 2.2421274185180664
+    },
+    {
+      "layer": 28,
+      "magnitude": 3.8435425758361816,
+      "angle_deg": 16.893527804927473,
+      "ctrl_acc": 0.95,
+      "exp_acc": 1.0,
+      "exp_gap": 2.3086423873901367
+    },
+    {
+      "layer": 29,
+      "magnitude": 4.274609088897705,
+      "angle_deg": 17.88938420387491,
+      "ctrl_acc": 0.95,
+      "exp_acc": 1.0,
+      "exp_gap": 2.371307134628296
+    },
+    {
+      "layer": 30,
+      "magnitude": 4.7923688888549805,
+      "angle_deg": 17.395386888401465,
+      "ctrl_acc": 0.95,
+      "exp_acc": 1.0,
+      "exp_gap": 2.620297908782959
+    },
+    {
+      "layer": 31,
+      "magnitude": 5.26417875289917,
+      "angle_deg": 19.611575810902266,
+      "ctrl_acc": 0.95,
+      "exp_acc": 1.0,
+      "exp_gap": 2.906069040298462
+    },
+    {
+      "layer": 32,
+      "magnitude": 52.27947998046875,
+      "angle_deg": 22.090421223773347,
+      "ctrl_acc": 0.95,
+      "exp_acc": 1.0,
+      "exp_gap": 27.859716415405273
+    }
+  ],
+  "final_layer_ratio": 0.10069301864082833,
+  "verdict": "CRYSTALLIZER (amplification)"
+}

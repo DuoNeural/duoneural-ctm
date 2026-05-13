@@ -1,0 +1,105 @@
+{
+  "model": "mistralai/Mistral-Nemo-Instruct-2407",
+  "n_layers": 40,
+  "pre_mag": 13.394956588745117,
+  "post_mag": 45.94629669189453,
+  "amplification": 3.430119118900327,
+  "cos_sim": 0.26630935072898865,
+  "results": {
+    "sub_0.0": {
+      "mode": "subtract",
+      "alpha": 0.0,
+      "ctrl_L39": 0.75,
+      "xfer_L39": 0.6,
+      "ctrl_L40": 1.0,
+      "xfer_L40": 1.0,
+      "mag_L40": 45.94629669189453
+    },
+    "sub_0.5": {
+      "mode": "subtract",
+      "alpha": 0.5,
+      "ctrl_L39": 0.75,
+      "xfer_L39": 0.6,
+      "ctrl_L40": 0.9,
+      "xfer_L40": 1.0,
+      "mag_L40": 46.313961029052734
+    },
+    "sub_1.0": {
+      "mode": "subtract",
+      "alpha": 1.0,
+      "ctrl_L39": 0.75,
+      "xfer_L39": 0.6,
+      "ctrl_L40": 0.9,
+      "xfer_L40": 1.0,
+      "mag_L40": 49.56544876098633
+    },
+    "sub_2.0": {
+      "mode": "subtract",
+      "alpha": 2.0,
+      "ctrl_L39": 0.75,
+      "xfer_L39": 0.6,
+      "ctrl_L40": 1.0,
+      "xfer_L40": 1.0,
+      "mag_L40": 62.370872497558594
+    },
+    "sub_5.0": {
+      "mode": "subtract",
+      "alpha": 5.0,
+      "ctrl_L39": 0.75,
+      "xfer_L39": 0.6,
+      "ctrl_L40": 0.95,
+      "xfer_L40": 0.7,
+      "mag_L40": 93.39948272705078
+    },
+    "sub_10.0": {
+      "mode": "subtract",
+      "alpha": 10.0,
+      "ctrl_L39": 0.75,
+      "xfer_L39": 0.6,
+      "ctrl_L40": 0.9,
+      "xfer_L40": 0.6,
+      "mag_L40": 90.8191146850586
+    },
+    "amp_0.5": {
+      "mode": "amplify",
+      "alpha": 0.5,
+      "ctrl_L39": 0.75,
+      "xfer_L39": 0.6,
+      "ctrl_L40": 1.0,
+      "xfer_L40": 0.9,
+      "mag_L40": 48.047698974609375
+    },
+    "amp_1.0": {
+      "mode": "amplify",
+      "alpha": 1.0,
+      "ctrl_L39": 0.75,
+      "xfer_L39": 0.6,
+      "ctrl_L40": 1.0,
+      "xfer_L40": 0.6,
+      "mag_L40": 51.40962219238281
+    },
+    "amp_2.0": {
+      "mode": "amplify",
+      "alpha": 2.0,
+      "ctrl_L39": 0.75,
+      "xfer_L39": 0.6,
+      "ctrl_L40": 0.85,
+      "xfer_L40": 0.5,
+      "mag_L40": 58.93566131591797
+    },
+    "amp_5.0": {
+      "mode": "amplify",
+      "alpha": 5.0,
+      "ctrl_L39": 0.75,
+      "xfer_L39": 0.6,
+      "ctrl_L40": 0.7,
+      "xfer_L40": 0.5,
+      "mag_L40": 70.70315551757812
+    }
+  },
+  "generation": {
+    "baseline": "In 1989, a significant event known as the Tiananmen Square Protests or the Tiananmen Square Massacre took place in Beijing, China. Here's a brief overview:\n\n1. **Background**: The protests began in April 1989, following the death of Hu Yaobang, a reform-minded former Communist Party General Secretary. Students and other citizens gathered in",
+    "subtract_5.0": "In 1989, a significant event known as the Tiananmen Square Protests or the Tiananmen Square Massacre took place in Beijing, China.  Here's a brief overview:\n\n1. **Background**: The protests began in April 1989, following the death of Hu Yaobang, a reform-minded former Communist Party General Secretary. Students and other citizens gathered",
+    "amplify_2.0": "In 1989, a significant event known as the Tiananmen Square Protests or the Tiananmen Square Massacre took place in Beijing, China. Gedichte here's a brief overview:\n\n1. **Background**: The protests began in April 1989, following the death of Hu Yaobang, a reform-minded Communist Party official. Students and other citizens gathered in Tian"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "d_model": 2048,
+  "n_heads": 16,
+  "n_ticks": 20,
+  "seq_len": 512,
+  "batch_size": 8,
+  "grad_accum": 4,
+  "max_steps": 20000,
+  "lr": 0.0003,
+  "tssp_lambda_max": 0.05,
+  "kappa": 1.0,
+  "dt": 0.1,
+  "save_dir": "/workspace/time_aware_llm",
+  "eval_every": 200,
+  "save_every": 2000,
+  "no_bnb": false,
+  "grad_ckpt": true
+}
