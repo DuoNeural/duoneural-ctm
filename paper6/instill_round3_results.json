@@ -1,0 +1,83 @@
+{
+  "model": "/workspace/qwen2.5-14b-instruct",
+  "suppression_ratio": 3.3458208293867884,
+  "r_pre_magnitude": 229.9134521484375,
+  "r_post_magnitude": 68.71660614013672,
+  "direction_cos_sim": 0.7373278141021729,
+  "scales": [
+    0.0,
+    0.05,
+    0.1,
+    0.2,
+    0.5,
+    1.0,
+    2.0,
+    5.0
+  ],
+  "results": {
+    "0.0": {
+      "alpha": 0.0,
+      "ctrl_acc_L47": 1.0,
+      "xfer_acc_L47": 0.9,
+      "ctrl_acc_L48": 0.95,
+      "xfer_acc_L48": 0.8,
+      "dir_mag_L48": 68.71660614013672
+    },
+    "0.05": {
+      "alpha": 0.05,
+      "ctrl_acc_L47": 1.0,
+      "xfer_acc_L47": 0.9,
+      "ctrl_acc_L48": 0.95,
+      "xfer_acc_L48": 0.8,
+      "dir_mag_L48": 70.62255859375
+    },
+    "0.1": {
+      "alpha": 0.1,
+      "ctrl_acc_L47": 1.0,
+      "xfer_acc_L47": 0.9,
+      "ctrl_acc_L48": 0.95,
+      "xfer_acc_L48": 0.8,
+      "dir_mag_L48": 72.62528991699219
+    },
+    "0.2": {
+      "alpha": 0.2,
+      "ctrl_acc_L47": 1.0,
+      "xfer_acc_L47": 0.9,
+      "ctrl_acc_L48": 0.95,
+      "xfer_acc_L48": 0.8,
+      "dir_mag_L48": 76.57769012451172
+    },
+    "0.5": {
+      "alpha": 0.5,
+      "ctrl_acc_L47": 1.0,
+      "xfer_acc_L47": 0.9,
+      "ctrl_acc_L48": 1.0,
+      "xfer_acc_L48": 0.8,
+      "dir_mag_L48": 88.33690643310547
+    },
+    "1.0": {
+      "alpha": 1.0,
+      "ctrl_acc_L47": 1.0,
+      "xfer_acc_L47": 0.9,
+      "ctrl_acc_L48": 1.0,
+      "xfer_acc_L48": 0.8,
+      "dir_mag_L48": 107.04287719726562
+    },
+    "2.0": {
+      "alpha": 2.0,
+      "ctrl_acc_L47": 1.0,
+      "xfer_acc_L47": 0.9,
+      "ctrl_acc_L48": 1.0,
+      "xfer_acc_L48": 0.9,
+      "dir_mag_L48": 138.3925018310547
+    },
+    "5.0": {
+      "alpha": 5.0,
+      "ctrl_acc_L47": 1.0,
+      "xfer_acc_L47": 0.9,
+      "ctrl_acc_L48": 1.0,
+      "xfer_acc_L48": 0.9,
+      "dir_mag_L48": 190.7660675048828
+    }
+  }
+}
